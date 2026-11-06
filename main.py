@@ -45,7 +45,7 @@ async def send_auto_news(context: ContextTypes.DEFAULT_TYPE):
             print(f"Error: {e}")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("🌍 Bot is running! News will auto post to Channel every 30 min.")
+    await update.message.reply_text("🌍 Bot is running! News will auto post to Channel every 5 min.")
 
 async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE):
     news = get_war_news()
@@ -60,7 +60,7 @@ async def main():
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("latest", latest))
     job_queue = app.job_queue
-    job_queue.run_repeating(send_auto_news, interval=1800, first=10)
+    job_queue.run_repeating(send_auto_news, interval=300, first=10)
     await app.initialize()
     await app.start()
     await app.updater.start_polling()
