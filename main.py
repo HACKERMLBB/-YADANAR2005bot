@@ -1,22 +1,22 @@
 import os
+import asyncio
 import feedparser
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 TOKEN = os.environ.get("BOT_TOKEN")
-CHANNEL_ID = os.environ.get("CHANNEL_ID")  # -100xxxxxxxxxx
+CHANNEL_ID = os.environ.get("CHANNEL_ID")
 
 FEEDS = [
     "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.aljazeera.com/xml/rss/all.xml",
     "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-    "https://www.reuters.com/rssfeed/worldNews",
 ]
 
 sent_links = set()
 
 def get_war_news():
-    keywords = ["war", "attack", "missile", "airstrike", "military", "iran", "israel", "ukraine", "russia", "gaza", "bomb", "troops", "conflict", "invasion", "army", "killed"]
+    keywords = ["war", "attack", "missile", "airstrike", "military", "iran", "israel", "ukraine", "russia", "gaza", "bomb", "troops", "conflict", "army", "killed"]
     news = []
     for url in FEEDS:
         try:
@@ -24,8 +24,7 @@ def get_war_news():
             for entry in feed.entries[:15]:
                 if entry.link in sent_links:
                     continue
-                title = entry.title.lower()
-                if any(k in title for k in keywords):
+                if any(k in entry.title.lower() for k in keywords):
                     news.append(entry)
                     sent_links.add(entry.link)
                 if len(news) >= 3:
@@ -54,17 +53,19 @@ async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("No new war news right now.")
         return
     for item in news:
-        text = f"📰 {item.title}\n🔗 {item.link}"
-        await update.message.reply_text(text)
+        await update.message.reply_text(f"📰 {item.title}\n🔗 {item.link}")
 
-if __name__ == "__main__":
+async def main():
     app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("latest", latest))
-
-    # හැම විනාඩි 30කටම Channel එකට Auto News යනවා
     job_queue = app.job_queue
     job_queue.run_repeating(send_auto_news, interval=1800, first=10)
-
+    await app.initialize()
+    await app.start()
+    await app.updater.start_polling()
     print("Bot Started...")
-    app.run_polling()
+    await asyncio.Event().wait()
+
+if __name__ == "__main__":
+    asyncio.run(main())
