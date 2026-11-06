@@ -1,88 +1,64 @@
 import os
 import asyncio
-import threading
 import feedparser
+import hashlib
 from flask import Flask
-from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+import threading
+from telegram import Bot
+from telegram.constants import ParseMode
 
-TOKEN = os.environ.get("BOT_TOKEN")
-CHANNEL_ID = os.environ.get("CHANNEL_ID")
-
-# --- Render එකට ඕනේ Port එක ---
-app_web = Flask(__name__)
-
-@app_web.route('/')
+app = Flask(__name__)
+@app.route('/')
 def home():
-    return "Bot is running!"
-
-def run_web():
+    return "Bot is Running!"
+def run_flask():
     port = int(os.environ.get("PORT", 10000))
-    app_web.run(host='0.0.0.0', port=port)
+    app.run(host="0.0.0.0", port=port)
+threading.Thread(target=run_flask, daemon=True).start()
 
-threading.Thread(target=run_web, daemon=True).start()
-# --- මෙතනින් ඉවරයි ---
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+CHANNEL_IDS = os.environ.get("CHANNEL_IDS", os.environ.get("CHANNEL_ID", "")).split(",")
+CHANNEL_IDS = [c.strip() for c in CHANNEL_IDS if c.strip()]
 
 FEEDS = [
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.aljazeera.com/xml/rss/all.xml",
-    "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    {"lang": "ENGLISH", "flag": "🇬🇧", "name": "BBC", "url": "https://feeds.bbci.co.uk/news/world/rss.xml"},
+    {"lang": "ENGLISH", "flag": "🇺🇸", "name": "CNN", "url": "http://rss.cnn.com/rss/edition_world.rss"},
+    {"lang": "ENGLISH", "flag": "🇺🇸", "name": "Fox News", "url": "https://moxie.foxnews.com/google-publisher/world.xml"},
+    {"lang": "ENGLISH", "flag": "🇶🇦", "name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
+    {"lang": "ENGLISH", "flag": "🌍", "name": "Reuters", "url": "https://www.reuters.com/rssFeed/worldNews"},
+    {"lang": "SPANISH", "flag": "🇪🇸", "name": "BBC Mundo", "url": "https://feeds.bbci.co.uk/mundo/rss.xml"},
+    {"lang": "RUSSIAN", "flag": "🇷🇺", "name": "BBC Russian", "url": "https://feeds.bbci.co.uk/russian/rss.xml"},
+    {"lang": "MYANMAR", "flag": "🇲🇲", "name": "BBC Burmese", "url": "https://feeds.bbci.co.uk/burmese/rss.xml"},
 ]
 
-sent_links = set()
-
-def get_war_news():
-    keywords = ["war", "attack", "missile", "airstrike", "military", "iran", "israel", "ukraine", "russia", "gaza", "bomb", "troops", "conflict", "army", "killed"]
-    news = []
-    for url in FEEDS:
+seen = set()
+async def check_news(bot):
+    for feed_info in FEEDS:
         try:
-            feed = feedparser.parse(url)
-            for entry in feed.entries[:15]:
-                if entry.link in sent_links:
-                    continue
-                if any(k in entry.title.lower() for k in keywords):
-                    news.append(entry)
-                    sent_links.add(entry.link)
-                if len(news) >= 3:
-                    break
-        except:
-            continue
-    return news[:3]
-
-async def send_auto_news(context: ContextTypes.DEFAULT_TYPE):
-    news = get_war_news()
-    if not news:
-        return
-    for item in news:
-        # --- මෙන්න Powered By එක දැම්මේ ---
-        text = f"🚨 **BREAKING WAR NEWS** 🚨\n\n📰 {item.title}\n\n🔗 [Read Full News]({item.link})\n\n#War #WorldNews #Breaking\n\n⚡ Powered by [yadanar2005bot](https://t.me/yadanar2005bot)"
-        try:
-            await context.bot.send_message(chat_id=CHANNEL_ID, text=text, parse_mode="Markdown")
+            feed = feedparser.parse(feed_info["url"])
+            for entry in feed.entries[:3]:
+                link = entry.get("link", "")
+                if not link: continue
+                h = hashlib.md5(link.encode()).hexdigest()
+                if h in seen: continue
+                seen.add(h)
+                title = entry.get("title", "No Title")
+                text = f"{feed_info['flag']} <b>[{feed_info['lang']} - {feed_info['name']}]</b>\n\n{title}\n\n🔗 <a href='{link}'>Read Full News</a>\n\n⚡ Powered by <a href='https://t.me/bigolive_asia'>@bigolive_asia</a>"
+                for ch in CHANNEL_IDS:
+                    try:
+                        await bot.send_message(chat_id=ch, text=text, parse_mode=ParseMode.HTML, disable_web_page_preview=False)
+                    except Exception as e:
+                        print(f"Send fail {ch}: {e}")
+                await asyncio.sleep(1)
         except Exception as e:
-            print(f"Error: {e}")
-
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("🌍 Bot is running! News will auto post to Channel every 5 min.\n\n⚡ Powered by https://t.me/yadanar2005bot")
-
-async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    news = get_war_news()
-    if not news:
-        await update.message.reply_text("No new war news right now.")
-        return
-    for item in news:
-        await update.message.reply_text(f"📰 {item.title}\n🔗 {item.link}\n\n⚡ Powered by https://t.me/yadanar2005bot")
+            print(f"Feed fail {feed_info['name']}: {e}")
 
 async def main():
-    app = ApplicationBuilder().token(TOKEN).build()
-    app.add_handler(CommandHandler("start", start))
-    app.add_handler(CommandHandler("latest", latest))
-    job_queue = app.job_queue
-    job_queue.run_repeating(send_auto_news, interval=300, first=10)
-    await app.initialize()
-    await app.start()
-    await app.updater.start_polling()
-    print("Bot Started...")
-    await asyncio.Event().wait()
+    bot = Bot(token=BOT_TOKEN)
+    print("Bot Started")
+    while True:
+        await check_news(bot)
+        await asyncio.sleep(300)
 
 if __name__ == "__main__":
     asyncio.run(main())
