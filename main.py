@@ -22,7 +22,6 @@ def home():
     return "Bot is Running!"
 def run_flask():
     port = int(os.environ.get("PORT", 10000))
-    # use_reloader=False දාන්න ඕන, නැත්නම් thread 2ක් හැදෙනවා
     app_flask.run(host="0.0.0.0", port=port, use_reloader=False)
 threading.Thread(target=run_flask, daemon=True).start()
 # ----------------------
@@ -368,6 +367,80 @@ FEEDS = [
     {"lang": "TIBET", "flag": "🏔️", "name": "Tibet Times", "url": "https://www.tibettimes.net/feed/"},
     {"lang": "TIBET", "flag": "🏔️", "name": "Tibet Watch", "url": "https://www.tibetwatch.org/feed/"},
     {"lang": "TIBET", "flag": "🏔️", "name": "Central Tibetan Admin", "url": "https://tibet.net/feed/"},
+
+    # --- PAKISTAN - NEW ---
+    {"lang": "PAKISTAN", "flag": "🇵🇰", "name": "Dawn Pakistan", "url": "https://www.dawn.com/rss"},
+    {"lang": "PAKISTAN", "flag": "🇵🇰", "name": "Geo News Pakistan", "url": "https://www.geo.tv/rss/1"},
+    {"lang": "PAKISTAN", "flag": "🇵🇰", "name": "Express Tribune", "url": "https://tribune.com.pk/feed"},
+    {"lang": "PAKISTAN", "flag": "🇵🇰", "name": "ARY News", "url": "https://arynews.tv/feed/"},
+    {"lang": "PAKISTAN", "flag": "🇵🇰", "name": "Samaa News", "url": "https://www.samaa.tv/feed/"},
+    {"lang": "PAKISTAN", "flag": "🇵🇰", "name": "BBC Urdu", "url": "https://feeds.bbci.co.uk/urdu/rss.xml"},
+    {"lang": "PAKISTAN", "flag": "🇵🇰", "name": "VOA Urdu", "url": "https://www.urduvoa.com/api/zrqo-qem$-vvr"},
+    {"lang": "PAKISTAN", "flag": "🇵🇰", "name": "The News Pakistan", "url": "https://www.thenews.com.pk/rss"},
+
+    # --- BANGLADESH - NEW ---
+    {"lang": "BANGLADESH", "flag": "🇧🇩", "name": "Daily Star Bangladesh", "url": "https://www.thedailystar.net/rss"},
+    {"lang": "BANGLADESH", "flag": "🇧🇩", "name": "Prothom Alo", "url": "https://www.prothomalo.com/feed"},
+    {"lang": "BANGLADESH", "flag": "🇧🇩", "name": "Dhaka Tribune", "url": "https://www.dhakatribune.com/feed"},
+    {"lang": "BANGLADESH", "flag": "🇧🇩", "name": "BBC Bangla", "url": "https://feeds.bbci.co.uk/bangla/rss.xml"},
+    {"lang": "BANGLADESH", "flag": "🇧🇩", "name": "VOA Bangla", "url": "https://www.voabangla.com/api/zrqo-qem$-vvr"},
+    {"lang": "BANGLADESH", "flag": "🇧🇩", "name": "BD News24", "url": "https://bdnews24.com/rss"},
+
+    # --- AFGHANISTAN - NEW ---
+    {"lang": "AFGHANISTAN", "flag": "🇦🇫", "name": "Tolo News", "url": "https://tolonews.com/feed"},
+    {"lang": "AFGHANISTAN", "flag": "🇦🇫", "name": "Khaama Press", "url": "https://www.khaama.com/feed/"},
+    {"lang": "AFGHANISTAN", "flag": "🇦🇫", "name": "BBC Pashto", "url": "https://feeds.bbci.co.uk/pashto/rss.xml"},
+    {"lang": "AFGHANISTAN", "flag": "🇦🇫", "name": "BBC Dari", "url": "https://feeds.bbci.co.uk/dari/rss.xml"},
+    {"lang": "AFGHANISTAN", "flag": "🇦🇫", "name": "VOA Pashto", "url": "https://www.voadeewa.com/api/zrqo-qem$-vvr"},
+    {"lang": "AFGHANISTAN", "flag": "🇦🇫", "name": "RFE Afghan", "url": "https://www.rferl.org/api/epiqq"},
+    {"lang": "AFGHANISTAN", "flag": "🇦🇫", "name": "Pajhwok Afghan", "url": "https://pajhwok.com/feed/"},
+
+    # --- KAZAKHSTAN - NEW ---
+    {"lang": "KAZAKHSTAN", "flag": "🇰🇿", "name": "Astana Times", "url": "https://astanatimes.com/feed/"},
+    {"lang": "KAZAKHSTAN", "flag": "🇰🇿", "name": "Kazakhstan News", "url": "https://en.inform.kz/rss"},
+    {"lang": "KAZAKHSTAN", "flag": "🇰🇿", "name": "Tengri News", "url": "https://en.tengrinews.kz/rss"},
+    {"lang": "KAZAKHSTAN", "flag": "🇰🇿", "name": "RFE Kazakh", "url": "https://www.azattyq.org/rss.xml"},
+
+    # --- UZBEKISTAN - NEW ---
+    {"lang": "UZBEKISTAN", "flag": "🇺🇿", "name": "Tashkent Times", "url": "https://tashkenttimes.uz/feed/"},
+    {"lang": "UZBEKISTAN", "flag": "🇺🇿", "name": "Kun Uz", "url": "https://kun.uz/en/rss"},
+    {"lang": "UZBEKISTAN", "flag": "🇺🇿", "name": "RFE Uzbek", "url": "https://www.ozodlik.org/rss.xml"},
+    {"lang": "UZBEKISTAN", "flag": "🇺🇿", "name": "BBC Uzbek", "url": "https://feeds.bbci.co.uk/uzbek/rss.xml"},
+
+    # --- KYRGYZSTAN - NEW ---
+    {"lang": "KYRGYZSTAN", "flag": "🇰🇬", "name": "24kg Kyrgyzstan", "url": "https://24.kg/eng/rss"},
+    {"lang": "KYRGYZSTAN", "flag": "🇰🇬", "name": "Kabar Kyrgyzstan", "url": "https://en.kabar.kg/feed/"},
+    {"lang": "KYRGYZSTAN", "flag": "🇰🇬", "name": "RFE Kyrgyz", "url": "https://www.azattyk.org/rss.xml"},
+
+    # --- TAJIKISTAN - NEW ---
+    {"lang": "TAJIKISTAN", "flag": "🇹🇯", "name": "Asia-Plus Tajikistan", "url": "https://www.asiaplustj.info/en/rss"},
+    {"lang": "TAJIKISTAN", "flag": "🇹🇯", "name": "RFE Tajik", "url": "https://www.ozodi.org/rss.xml"},
+    {"lang": "TAJIKISTAN", "flag": "🇹🇯", "name": "BBC Tajik", "url": "https://feeds.bbci.co.uk/tajik/rss.xml"},
+
+    # --- TURKMENISTAN - NEW ---
+    {"lang": "TURKMENISTAN", "flag": "🇹🇲", "name": "Turkmen Portal", "url": "https://www.turkmenportal.com/rss"},
+    {"lang": "TURKMENISTAN", "flag": "🇹🇲", "name": "RFE Turkmen", "url": "https://www.azathabar.com/rss.xml"},
+    {"lang": "TURKMENISTAN", "flag": "🇹🇲", "name": "Chronicles Turkmenistan", "url": "https://www.chrono-tm.org/feed/"},
+
+    # --- AZERBAIJAN - NEW ---
+    {"lang": "AZERBAIJAN", "flag": "🇦🇿", "name": "AzerNews", "url": "https://www.azernews.az/feed/"},
+    {"lang": "AZERBAIJAN", "flag": "🇦🇿", "name": "Trend Azerbaijan", "url": "https://en.trend.az/rss.xml"},
+    {"lang": "AZERBAIJAN", "flag": "🇦🇿", "name": "BBC Azerbaijani", "url": "https://feeds.bbci.co.uk/azeri/rss.xml"},
+
+    # --- ARMENIA - NEW ---
+    {"lang": "ARMENIA", "flag": "🇦🇲", "name": "Armenpress", "url": "https://armenpress.am/eng/rss.xml"},
+    {"lang": "ARMENIA", "flag": "🇦🇲", "name": "Armenia News", "url": "https://www.panarmenian.net/rss"},
+    {"lang": "ARMENIA", "flag": "🇦🇲", "name": "RFE Armenian", "url": "https://www.azatutyun.am/rss.xml"},
+
+    # --- GEORGIA - NEW ---
+    {"lang": "GEORGIA", "flag": "🇬🇪", "name": "Civil Georgia", "url": "https://civil.ge/feed/"},
+    {"lang": "GEORGIA", "flag": "🇬🇪", "name": "Agenda Georgia", "url": "https://agenda.ge/feed/"},
+    {"lang": "GEORGIA", "flag": "🇬🇪", "name": "OC Media Georgia", "url": "https://oc-media.org/feed/"},
+
+    # --- CYPRUS - NEW ---
+    {"lang": "CYPRUS", "flag": "🇨🇾", "name": "Cyprus Mail", "url": "https://cyprus-mail.com/feed/"},
+    {"lang": "CYPRUS", "flag": "🇨🇾", "name": "Cyprus News", "url": "https://in-cyprus.com/feed/"},
+    {"lang": "CYPRUS", "flag": "🇨🇾", "name": "Phil News Cyprus", "url": "https://www.philenews.com/rss.xml"},
 ]
 
 seen = set()
@@ -377,7 +450,7 @@ def make_text(feed_info, title, link):
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "🌍 Bot is running! News every 5 min.\n\nAll Regions: India, World, Sinhala, Myanmar, Philippines, Indonesia, China, Europe, West Asia, East Asia, Latin, South America, Thailand, Vietnam, Cambodia, Malaysia, Bhutan, Nepal, Laos, Singapore, Brunei, Timor-Leste, North Korea, Tibet\n\n⚡ Powered by https://t.me/bigolive_asia"
+        "🌍 Bot is running! News every 5 min.\n\nAll Regions: India, World, Sinhala, Myanmar, Philippines, Indonesia, China, Europe, West Asia, East Asia, Latin, South America, Thailand, Vietnam, Cambodia, Malaysia, Bhutan, Nepal, Laos, Singapore, Brunei, Timor-Leste, North Korea, Tibet, Pakistan, Bangladesh, Afghanistan, Kazakhstan, Uzbekistan, Kyrgyzstan, Tajikistan, Turkmenistan, Azerbaijan, Armenia, Georgia, Cyprus\n\n⚡ Powered by https://t.me/bigolive_asia"
     )
 
 async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -425,7 +498,6 @@ async def post_init(app):
     asyncio.create_task(auto_loop(app.bot))
 
 def main():
-    # --- FIX: MainThread එකට අලුත් loop එකක් දෙනවා ---
     try:
         asyncio.get_event_loop()
     except RuntimeError:
