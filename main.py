@@ -30,7 +30,9 @@ FEEDS = [
     {"lang": "ENGLISH", "flag": "🇶🇦", "name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
     {"lang": "ENGLISH", "flag": "🌍", "name": "Reuters", "url": "https://www.reuters.com/rssFeed/worldNews"},
     {"lang": "SPANISH", "flag": "🇪🇸", "name": "BBC Mundo", "url": "https://feeds.bbci.co.uk/mundo/rss.xml"},
+    {"lang": "SPANISH", "flag": "🇪🇸", "name": "DW Espanol", "url": "https://rss.dw.com/rdf/rss-es-all"},
     {"lang": "RUSSIAN", "flag": "🇷🇺", "name": "BBC Russian", "url": "https://feeds.bbci.co.uk/russian/rss.xml"},
+    {"lang": "RUSSIAN", "flag": "🇷🇺", "name": "DW Russian", "url": "https://rss.dw.com/rdf/rss-ru-all"},
     {"lang": "MYANMAR", "flag": "🇲🇲", "name": "BBC Burmese", "url": "https://feeds.bbci.co.uk/burmese/rss.xml"},
 ]
 
@@ -39,7 +41,6 @@ seen = set()
 def make_text(feed_info, title, link):
     return f"{feed_info['flag']} <b>[{feed_info['lang']} - {feed_info['name']}]</b>\n\n{title}\n\n🔗 <a href='{link}'>Read Full News</a>\n\n⚡ Powered by <a href='https://t.me/bigolive_asia'>@bigolive_asia</a>"
 
-# --- /start & /latest ---
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
         "🌍 Bot is running! News will auto post to Channel every 5 min.\n\n⚡ Powered by https://t.me/bigolive_asia"
@@ -60,7 +61,6 @@ async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE):
         except Exception as e:
             print(f"Latest fail {feed_info['name']}: {e}")
 
-# --- Auto Post Loop ---
 async def check_news(bot):
     for feed_info in FEEDS:
         try:
@@ -90,12 +90,13 @@ async def auto_loop(bot):
 async def post_init(app):
     asyncio.create_task(auto_loop(app.bot))
 
-async def main():
+# --- මේ තැන තමයි Fix එක ---
+def main():
     app = Application.builder().token(BOT_TOKEN).post_init(post_init).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("latest", latest))
     print("Bot Started - Auto + Commands")
-    await app.run_polling()
+    app.run_polling()
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
