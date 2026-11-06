@@ -37,7 +37,7 @@ FEEDS = [
     {"lang": "RUSSIAN", "flag": "🇷🇺", "name": "BBC Russian", "url": "https://feeds.bbci.co.uk/russian/rss.xml"},
     {"lang": "RUSSIAN", "flag": "🇷🇺", "name": "DW Russian", "url": "https://rss.dw.com/rdf/rss-ru-all"},
 
-    # --- INDIA - LOCAL + GLOBAL - NEW ---
+    # --- INDIA ---
     {"lang": "INDIA", "flag": "🇮🇳", "name": "NDTV India", "url": "https://feeds.feedburner.com/ndtvnews-top-stories"},
     {"lang": "INDIA", "flag": "🇮🇳", "name": "Times of India", "url": "https://timesofindia.indiatimes.com/rssfeedstopstories.cms"},
     {"lang": "INDIA", "flag": "🇮🇳", "name": "Indian Express", "url": "https://indianexpress.com/feed/"},
@@ -55,7 +55,6 @@ FEEDS = [
     {"lang": "INDIA", "flag": "🇮🇳", "name": "DW Tamil", "url": "https://rss.dw.com/rdf/rss-ta-all"},
     {"lang": "INDIA", "flag": "🇮🇳", "name": "Aaj Tak Hindi", "url": "https://www.aajtak.in/rss"},
     {"lang": "INDIA", "flag": "🇮🇳", "name": "ABP News Hindi", "url": "https://www.abplive.com/feed"},
-    {"lang": "INDIA", "flag": "🇮🇳", "name": "NDTV Tamil", "url": "https://www.ndtv.com/tamil/rss"},
     {"lang": "INDIA", "flag": "🇮🇳", "name": "Manorama Malayalam", "url": "https://www.onmanorama.com/rss.xml"},
     {"lang": "INDIA", "flag": "🇮🇳", "name": "Mathrubhumi Malayalam", "url": "https://www.mathrubhumi.com/rss.xml"},
     {"lang": "INDIA", "flag": "🇮🇳", "name": "Eenadu Telugu", "url": "https://www.eenadu.net/rss"},
@@ -66,13 +65,7 @@ FEEDS = [
     {"lang": "INDIA", "flag": "🇮🇳", "name": "WION India Global", "url": "https://www.wionews.com/rss"},
     {"lang": "INDIA", "flag": "🇮🇳", "name": "Firstpost India", "url": "https://www.firstpost.com/feed"},
 
-    # --- HINDI / TAMIL - කලින් තිබුන ටික ---
-    {"lang": "HINDI", "flag": "🇮🇳", "name": "BBC Hindi", "url": "https://feeds.bbci.co.uk/hindi/rss.xml"},
-    {"lang": "HINDI", "flag": "🇮🇳", "name": "DW Hindi", "url": "https://rss.dw.com/rdf/rss-hi-all"},
-    {"lang": "TAMIL", "flag": "🇱🇰", "name": "BBC Tamil", "url": "https://feeds.bbci.co.uk/tamil/rss.xml"},
-    {"lang": "TAMIL", "flag": "🇱🇰", "name": "DW Tamil", "url": "https://rss.dw.com/rdf/rss-ta-all"},
-
-    # --- SINHALA - Hiru + Derana ---
+    # --- SINHALA ---
     {"lang": "SINHALA", "flag": "🇱🇰", "name": "Hiru News", "url": "https://www.hirunews.lk/rss/sinhala.xml"},
     {"lang": "SINHALA", "flag": "🇱🇰", "name": "Ada Derana", "url": "https://sinhala.adaderana.lk/rss.php"},
     {"lang": "SINHALA", "flag": "🇱🇰", "name": "BBC Sinhala", "url": "https://feeds.bbci.co.uk/sinhala/rss.xml"},
@@ -116,16 +109,43 @@ FEEDS = [
     {"lang": "CHINA", "flag": "🇨🇳", "name": "VOA Chinese", "url": "https://www.voachinese.com/api/epiqq"},
     {"lang": "CHINA", "flag": "🇨🇳", "name": "RFA Chinese", "url": "https://www.rfa.org/mandarin/rss2.xml"},
 
+    # --- ENGLISH GLOBAL ---
+    {"lang": "WORLD", "flag": "🌍", "name": "BBC World", "url": "https://feeds.bbci.co.uk/news/world/rss.xml"},
+    {"lang": "WORLD", "flag": "🌍", "name": "Reuters World", "url": "https://www.reuters.com/rssfeed/worldNews"},
+    {"lang": "WORLD", "flag": "🌍", "name": "AP News", "url": "https://apnews.com/rss"},
+    {"lang": "WORLD", "flag": "🌍", "name": "France 24 English", "url": "https://www.france24.com/en/rss"},
+    {"lang": "WORLD", "flag": "🌍", "name": "DW English", "url": "https://rss.dw.com/rdf/rss-en-all"},
+    {"lang": "WORLD", "flag": "🌍", "name": "Euronews English", "url": "https://www.euronews.com/rss"},
+    {"lang": "WORLD", "flag": "🌍", "name": "NPR World", "url": "https://feeds.npr.org/1004/rss.xml"},
+    {"lang": "WORLD", "flag": "🌍", "name": "NY Times World", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"},
+    {"lang": "WORLD", "flag": "🌍", "name": "Washington Post World", "url": "https://feeds.washingtonpost.com/rss/world"},
+
+    # --- ENGLISH LOCAL ---
+    {"lang": "SRI LANKA", "flag": "🇱🇰", "name": "Daily Mirror", "url": "https://www.dailymirror.lk/rss"},
+    {"lang": "SRI LANKA", "flag": "🇱🇰", "name": "Daily FT", "url": "https://www.ft.lk/rss"},
+    {"lang": "SRI LANKA", "flag": "🇱🇰", "name": "Daily News", "url": "https://www.dailynews.lk/rss"},
+    {"lang": "SRI LANKA", "flag": "🇱🇰", "name": "The Island", "url": "https://www.island.lk/rss"},
+    {"lang": "VIETNAM", "flag": "🇻🇳", "name": "VnExpress English", "url": "https://e.vnexpress.net/rss/news.rss"},
+    {"lang": "VIETNAM", "flag": "🇻🇳", "name": "VietnamNet English", "url": "https://vietnamnet.vn/en/rss"},
+    {"lang": "VIETNAM", "flag": "🇻🇳", "name": "Hanoi Times", "url": "https://hanoitimes.vn/rss"},
+    {"lang": "CAMBODIA", "flag": "🇰🇭", "name": "Khmer Times English", "url": "https://www.khmertimeskh.com/feed/"},
+    {"lang": "CAMBODIA", "flag": "🇰🇭", "name": "Cambodianess", "url": "https://cambodianess.com/feed/"},
+    {"lang": "MALAYSIA", "flag": "🇲🇾", "name": "The Star English", "url": "https://www.thestar.com.my/rss/News/Nation"},
+    {"lang": "MALAYSIA", "flag": "🇲🇾", "name": "Malaysiakini", "url": "https://www.malaysiakini.com/rss/en/news.rss"},
+    {"lang": "MALAYSIA", "flag": "🇲🇾", "name": "Sinar Daily", "url": "https://www.sinardaily.my/feed/"},
+    {"lang": "NEPAL", "flag": "🇳🇵", "name": "My Republica", "url": "https://myrepublica.nagariknetwork.com/feed/"},
+    {"lang": "NEPAL", "flag": "🇳🇵", "name": "Himalayan Times", "url": "https://thehimalayantimes.com/rss"},
+    {"lang": "INDONESIA", "flag": "🇮🇩", "name": "Jakarta Post", "url": "https://www.thejakartapost.com/rss"},
+    {"lang": "INDONESIA", "flag": "🇮🇩", "name": "Antara English", "url": "https://en.antaranews.com/rss/top-story"},
+
     # --- EUROPE ---
     {"lang": "UK", "flag": "🇬🇧", "name": "BBC UK", "url": "https://feeds.bbci.co.uk/news/uk/rss.xml"},
     {"lang": "UK", "flag": "🇬🇧", "name": "The Guardian UK", "url": "https://www.theguardian.com/uk/rss"},
     {"lang": "UK", "flag": "🇬🇧", "name": "Sky News UK", "url": "https://feeds.skynews.com/feeds/rss/home.xml"},
     {"lang": "UK", "flag": "🇬🇧", "name": "Daily Mail UK", "url": "https://www.dailymail.co.uk/home/index.rss"},
-    {"lang": "FRANCE", "flag": "🇫🇷", "name": "France 24 English", "url": "https://www.france24.com/en/rss"},
     {"lang": "FRANCE", "flag": "🇫🇷", "name": "France 24 French", "url": "https://www.france24.com/fr/rss"},
     {"lang": "FRANCE", "flag": "🇫🇷", "name": "Le Monde French", "url": "https://www.lemonde.fr/rss/une.xml"},
     {"lang": "FRANCE", "flag": "🇫🇷", "name": "BBC French", "url": "https://feeds.bbci.co.uk/french/rss.xml"},
-    {"lang": "GERMANY", "flag": "🇩🇪", "name": "DW English", "url": "https://rss.dw.com/rdf/rss-en-all"},
     {"lang": "GERMANY", "flag": "🇩🇪", "name": "DW German", "url": "https://rss.dw.com/rdf/rss-de-all"},
     {"lang": "GERMANY", "flag": "🇩🇪", "name": "Tagesschau Germany", "url": "https://www.tagesschau.de/xml/rss2/"},
     {"lang": "GERMANY", "flag": "🇩🇪", "name": "Spiegel Germany", "url": "https://www.spiegel.de/schlagzeilen/index.rss"},
@@ -156,7 +176,6 @@ FEEDS = [
     {"lang": "UAE", "flag": "🇦🇪", "name": "Gulf News UAE", "url": "https://gulfnews.com/rss"},
     {"lang": "UAE", "flag": "🇦🇪", "name": "Khaleej Times UAE", "url": "https://www.khaleejtimes.com/rss"},
     {"lang": "UAE", "flag": "🇦🇪", "name": "The National UAE", "url": "https://www.thenationalnews.com/rss"},
-    {"lang": "QATAR", "flag": "🇶🇦", "name": "Al Jazeera Qatar", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
     {"lang": "QATAR", "flag": "🇶🇦", "name": "Gulf Times Qatar", "url": "https://www.gulf-times.com/rss.xml"},
     {"lang": "QATAR", "flag": "🇶🇦", "name": "The Peninsula Qatar", "url": "https://www.thepeninsulaqatar.com/rss"},
     {"lang": "ISRAEL", "flag": "🇮🇱", "name": "Times of Israel", "url": "https://www.timesofisrael.com/feed/"},
@@ -205,7 +224,7 @@ FEEDS = [
     {"lang": "LATIN", "flag": "🌎", "name": "CNN Espanol", "url": "https://cnnespanol.cnn.com/feed/"},
     {"lang": "LATIN", "flag": "🌎", "name": "Telemundo", "url": "https://www.telemundo.com/rss.xml"},
 
-    # --- SOUTH AMERICA ALL ---
+    # --- SOUTH AMERICA ---
     {"lang": "BRAZIL", "flag": "🇧🇷", "name": "G1 Brazil", "url": "https://g1.globo.com/rss/g1/"},
     {"lang": "BRAZIL", "flag": "🇧🇷", "name": "Folha Brazil", "url": "https://feeds.folha.uol.com.br/emcimadahora/rss091.xml"},
     {"lang": "BRAZIL", "flag": "🇧🇷", "name": "BBC Brasil", "url": "https://feeds.bbci.co.uk/portuguese/rss.xml"},
@@ -248,8 +267,99 @@ FEEDS = [
     {"lang": "SURINAME", "flag": "🇸🇷", "name": "Suriname Herald", "url": "https://www.surinameherald.com/feed/"},
     {"lang": "SURINAME", "flag": "🇸🇷", "name": "Starnieuws Suriname", "url": "https://www.starnieuws.com/rss.xml"},
     {"lang": "FRENCH GUIANA", "flag": "🇬🇫", "name": "France Guyane", "url": "https://www.franceguyane.fr/rss.xml"},
-    {"lang": "SOUTH AMERICA", "flag": "🌎", "name": "BBC Mundo", "url": "https://feeds.bbci.co.uk/mundo/rss.xml"},
     {"lang": "SOUTH AMERICA", "flag": "🌎", "name": "DW Espanol Latam", "url": "https://rss.dw.com/rdf/rss-es-latam"},
+
+    # --- THAILAND ---
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "Bangkok Post", "url": "https://www.bangkokpost.com/rss/data/news.xml"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "The Nation", "url": "https://www.nationthailand.com/rss"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "Thai PBS World", "url": "https://www.thaipbsworld.com/rss"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "Khaosod English", "url": "https://www.khaosodenglish.com/feed/"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "Pattaya Mail", "url": "https://www.pattayamail.com/feed"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "Phuket News", "url": "https://www.thephuketnews.com/feed/"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "Thairath", "url": "https://www.thairath.co.th/rss/news"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "Daily News Thai", "url": "https://www.dailynews.co.th/rss"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "Matichon", "url": "https://www.matichon.co.th/feed"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "Khaosod Thai", "url": "https://www.khaosod.co.th/feed"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "Sanook News", "url": "https://www.sanook.com/news/rss/"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "Manager Online", "url": "https://mgronline.com/rss"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "PPTV HD", "url": "https://www.pptvhd36.com/rss"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "Thai PBS Thai", "url": "https://www.thaipbs.or.th/rss"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "BBC Thai", "url": "https://feeds.bbci.co.uk/thai/rss.xml"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "VOA Thai", "url": "https://www.voathai.com/api/zmio-ep_yr"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "RFA Thai", "url": "https://www.rfa.org/thai/RSS"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "DW Thai", "url": "https://rss.dw.com/rdf/rss-th-all"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "Reuters Thailand", "url": "https://www.reuters.com/rssfeed/thailandNews"},
+
+    # --- VIETNAM ---
+    {"lang": "VIETNAM", "flag": "🇻🇳", "name": "VnExpress", "url": "https://vnexpress.net/rss/tin-moi-nhat.rss"},
+    {"lang": "VIETNAM", "flag": "🇻🇳", "name": "Tuoi Tre News", "url": "https://tuoitrenews.vn/rss/feed.rss"},
+    {"lang": "VIETNAM", "flag": "🇻🇳", "name": "VietnamNet", "url": "https://vietnamnet.vn/rss/tin-moi-nhat.rss"},
+    {"lang": "VIETNAM", "flag": "🇻🇳", "name": "VietnamPlus", "url": "https://en.vietnamplus.vn/rss/home.rss"},
+    {"lang": "VIETNAM", "flag": "🇻🇳", "name": "BBC Vietnamese", "url": "https://feeds.bbci.co.uk/vietnamese/rss.xml"},
+    {"lang": "VIETNAM", "flag": "🇻🇳", "name": "VOA Vietnamese", "url": "https://www.voatiengviet.com/api/zrqo-qem$-vvr"},
+
+    # --- CAMBODIA ---
+    {"lang": "CAMBODIA", "flag": "🇰🇭", "name": "Khmer Times", "url": "https://www.khmertimeskh.com/feed/"},
+    {"lang": "CAMBODIA", "flag": "🇰🇭", "name": "Phnom Penh Post", "url": "https://www.phnompenhpost.com/rss.xml"},
+    {"lang": "CAMBODIA", "flag": "🇰🇭", "name": "BBC Khmer", "url": "https://feeds.bbci.co.uk/khmer/rss.xml"},
+
+    # --- MALAYSIA ---
+    {"lang": "MALAYSIA", "flag": "🇲🇾", "name": "The Star", "url": "https://www.thestar.com.my/rss/News/Nation"},
+    {"lang": "MALAYSIA", "flag": "🇲🇾", "name": "New Straits Times", "url": "https://www.nst.com.my/rss/feed/news"},
+    {"lang": "MALAYSIA", "flag": "🇲🇾", "name": "Malay Mail", "url": "https://www.malaymail.com/feed/rss"},
+    {"lang": "MALAYSIA", "flag": "🇲🇾", "name": "Free Malaysia Today", "url": "https://www.freemalaysiatoday.com/feed/"},
+    {"lang": "MALAYSIA", "flag": "🇲🇾", "name": "Bernama", "url": "https://www.bernama.com/en/rss/rss.php"},
+
+    # --- BHUTAN ---
+    {"lang": "BHUTAN", "flag": "🇧🇹", "name": "Kuensel", "url": "https://kuenselonline.com/feed/"},
+    {"lang": "BHUTAN", "flag": "🇧🇹", "name": "Bhutan Times", "url": "https://bhutantimes.bt/feed/"},
+    {"lang": "BHUTAN", "flag": "🇧🇹", "name": "BBS", "url": "https://www.bbs.bt/feed/"},
+
+    # --- NEPAL ---
+    {"lang": "NEPAL", "flag": "🇳🇵", "name": "Kathmandu Post", "url": "https://kathmandupost.com/rss"},
+    {"lang": "NEPAL", "flag": "🇳🇵", "name": "Online Khabar", "url": "https://english.onlinekhabar.com/feed/"},
+    {"lang": "NEPAL", "flag": "🇳🇵", "name": "BBC Nepali", "url": "https://feeds.bbci.co.uk/nepali/rss.xml"},
+    {"lang": "NEPAL", "flag": "🇳🇵", "name": "Setopati", "url": "https://en.setopati.com/feed/"},
+
+    # --- LAOS ---
+    {"lang": "LAOS", "flag": "🇱🇦", "name": "Vientiane Times", "url": "https://www.vientianetimes.org.la/feed/"},
+    {"lang": "LAOS", "flag": "🇱🇦", "name": "BBC Lao", "url": "https://feeds.bbci.co.uk/lao/rss.xml"},
+    {"lang": "LAOS", "flag": "🇱🇦", "name": "Laotian Times", "url": "https://laotiantimes.com/feed/"},
+    {"lang": "LAOS", "flag": "🇱🇦", "name": "VOA Lao", "url": "https://www.voalaos.com/api/zqio-qem$-vvr"},
+    {"lang": "LAOS", "flag": "🇱🇦", "name": "RFA Lao", "url": "https://www.rfa.org/lao/rss2.xml"},
+
+    # --- SINGAPORE ---
+    {"lang": "SINGAPORE", "flag": "🇸🇬", "name": "Straits Times", "url": "https://www.straitstimes.com/news/singapore/rss.xml"},
+    {"lang": "SINGAPORE", "flag": "🇸🇬", "name": "CNA Singapore", "url": "https://www.channelnewsasia.com/rssfeeds/8395986"},
+    {"lang": "SINGAPORE", "flag": "🇸🇬", "name": "CNA Asia", "url": "https://www.channelnewsasia.com/rssfeeds/8395884"},
+    {"lang": "SINGAPORE", "flag": "🇸🇬", "name": "Mothership", "url": "https://mothership.sg/feed/"},
+    {"lang": "SINGAPORE", "flag": "🇸🇬", "name": "Today Online", "url": "https://www.todayonline.com/rss.xml"},
+    {"lang": "SINGAPORE", "flag": "🇸🇬", "name": "Business Times", "url": "https://www.businesstimes.com.sg/rss.xml"},
+
+    # --- BRUNEI ---
+    {"lang": "BRUNEI", "flag": "🇧🇳", "name": "Borneo Bulletin", "url": "https://borneobulletin.com.bn/feed/"},
+    {"lang": "BRUNEI", "flag": "🇧🇳", "name": "The Scoop Brunei", "url": "https://thescoop.co/feed/"},
+
+    # --- TIMOR-LESTE ---
+    {"lang": "TIMOR-LESTE", "flag": "🇹🇱", "name": "Tatoli Timor", "url": "https://en.tatoli.tl/feed/"},
+    {"lang": "TIMOR-LESTE", "flag": "🇹🇱", "name": "Timor Post", "url": "https://www.timorpost.com/feed/"},
+    {"lang": "TIMOR-LESTE", "flag": "🇹🇱", "name": "Tempo Timor", "url": "https://www.tempotimor.com/feed/"},
+
+    # --- NORTH KOREA ---
+    {"lang": "NORTH KOREA", "flag": "🇰🇵", "name": "KCNA Watch", "url": "https://kcnawatch.org/feed/"},
+    {"lang": "NORTH KOREA", "flag": "🇰🇵", "name": "NK News", "url": "https://www.nknews.org/feed/"},
+    {"lang": "NORTH KOREA", "flag": "🇰🇵", "name": "Daily NK", "url": "https://www.dailynk.com/english/feed/"},
+    {"lang": "NORTH KOREA", "flag": "🇰🇵", "name": "38 North", "url": "https://www.38north.org/feed/"},
+    {"lang": "NORTH KOREA", "flag": "🇰🇵", "name": "Yonhap NK", "url": "https://en.yna.co.kr/rss/nk"},
+
+    # --- TIBET ---
+    {"lang": "TIBET", "flag": "🏔️", "name": "RFA Tibetan", "url": "https://www.rfa.org/tibetan/rss2.xml"},
+    {"lang": "TIBET", "flag": "🏔️", "name": "VOA Tibetan", "url": "https://www.voatibetan.com/api/zqio-qem$-vvr"},
+    {"lang": "TIBET", "flag": "🏔️", "name": "Phayul Tibet", "url": "https://www.phayul.com/feed/"},
+    {"lang": "TIBET", "flag": "🏔️", "name": "Tibet Post", "url": "https://www.thetibetpost.com/feed/"},
+    {"lang": "TIBET", "flag": "🏔️", "name": "Tibet Times", "url": "https://www.tibettimes.net/feed/"},
+    {"lang": "TIBET", "flag": "🏔️", "name": "Tibet Watch", "url": "https://www.tibetwatch.org/feed/"},
+    {"lang": "TIBET", "flag": "🏔️", "name": "Central Tibetan Admin", "url": "https://tibet.net/feed/"},
 ]
 
 seen = set()
@@ -259,7 +369,7 @@ def make_text(feed_info, title, link):
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "🌍 Bot is running! News every 5 min.\n\nAll Regions: India, World, Sinhala, Myanmar, Philippines, Indonesia, China, Europe, West Asia, East Asia, Latin, South America\n\n⚡ Powered by https://t.me/bigolive_asia"
+        "🌍 Bot is running! News every 5 min.\n\nAll Regions: India, World, Sinhala, Myanmar, Philippines, Indonesia, China, Europe, West Asia, East Asia, Latin, South America, Thailand, Vietnam, Cambodia, Malaysia, Bhutan, Nepal, Laos, Singapore, Brunei, Timor-Leste, North Korea, Tibet\n\n⚡ Powered by https://t.me/bigolive_asia"
     )
 
 async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -307,9 +417,6 @@ async def post_init(app):
     asyncio.create_task(auto_loop(app.bot))
 
 def main():
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-
     app = Application.builder().token(BOT_TOKEN).post_init(post_init).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("latest", latest))
