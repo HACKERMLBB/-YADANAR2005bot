@@ -90,8 +90,10 @@ async def auto_loop(bot):
 async def post_init(app):
     asyncio.create_task(auto_loop(app.bot))
 
-# --- මේ තැන තමයි Fix එක ---
 def main():
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+
     app = Application.builder().token(BOT_TOKEN).post_init(post_init).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("latest", latest))
