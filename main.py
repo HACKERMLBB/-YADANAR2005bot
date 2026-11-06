@@ -31,29 +31,55 @@ FEEDS = [
     {"lang": "ENGLISH", "flag": "🇶🇦", "name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
     {"lang": "ENGLISH", "flag": "🌍", "name": "Reuters", "url": "https://www.reuters.com/rssFeed/worldNews"},
 
-    # --- SPANISH WORLD ---
+    # --- SPANISH / RUSSIAN ---
     {"lang": "SPANISH", "flag": "🇪🇸", "name": "BBC Mundo", "url": "https://feeds.bbci.co.uk/mundo/rss.xml"},
     {"lang": "SPANISH", "flag": "🇪🇸", "name": "DW Espanol", "url": "https://rss.dw.com/rdf/rss-es-all"},
-
-    # --- RUSSIAN ---
     {"lang": "RUSSIAN", "flag": "🇷🇺", "name": "BBC Russian", "url": "https://feeds.bbci.co.uk/russian/rss.xml"},
     {"lang": "RUSSIAN", "flag": "🇷🇺", "name": "DW Russian", "url": "https://rss.dw.com/rdf/rss-ru-all"},
 
-    # --- HINDI ---
+    # --- INDIA - LOCAL + GLOBAL - NEW ---
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "NDTV India", "url": "https://feeds.feedburner.com/ndtvnews-top-stories"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "Times of India", "url": "https://timesofindia.indiatimes.com/rssfeedstopstories.cms"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "Indian Express", "url": "https://indianexpress.com/feed/"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "Hindustan Times", "url": "https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "India Today", "url": "https://www.indiatoday.in/rss/home"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "Republic India", "url": "https://www.republicworld.com/rss"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "DD News India", "url": "https://ddnews.gov.in/feed"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "The Hindu", "url": "https://www.thehindu.com/news/national/feeder/default.rss"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "Deccan Herald", "url": "https://www.deccanherald.com/rss/national.rss"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "Zee News India", "url": "https://zeenews.india.com/rss/india-national-news.xml"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "Economic Times India", "url": "https://economictimes.indiatimes.com/rssfeedstopstories.cms"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "BBC Hindi", "url": "https://feeds.bbci.co.uk/hindi/rss.xml"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "DW Hindi", "url": "https://rss.dw.com/rdf/rss-hi-all"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "BBC Tamil", "url": "https://feeds.bbci.co.uk/tamil/rss.xml"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "DW Tamil", "url": "https://rss.dw.com/rdf/rss-ta-all"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "Aaj Tak Hindi", "url": "https://www.aajtak.in/rss"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "ABP News Hindi", "url": "https://www.abplive.com/feed"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "NDTV Tamil", "url": "https://www.ndtv.com/tamil/rss"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "Manorama Malayalam", "url": "https://www.onmanorama.com/rss.xml"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "Mathrubhumi Malayalam", "url": "https://www.mathrubhumi.com/rss.xml"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "Eenadu Telugu", "url": "https://www.eenadu.net/rss"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "Sakshi Telugu", "url": "https://www.sakshi.com/rss"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "Dinamalar Tamil", "url": "https://www.dinamalar.com/rss.xml"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "Anandabazar Bengali", "url": "https://www.anandabazar.com/rss.xml"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "Dainik Bhaskar Hindi", "url": "https://www.bhaskar.com/rss-v1--category-0.xml"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "WION India Global", "url": "https://www.wionews.com/rss"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "Firstpost India", "url": "https://www.firstpost.com/feed"},
+
+    # --- HINDI / TAMIL - කලින් තිබුන ටික ---
     {"lang": "HINDI", "flag": "🇮🇳", "name": "BBC Hindi", "url": "https://feeds.bbci.co.uk/hindi/rss.xml"},
     {"lang": "HINDI", "flag": "🇮🇳", "name": "DW Hindi", "url": "https://rss.dw.com/rdf/rss-hi-all"},
-
-    # --- TAMIL ---
     {"lang": "TAMIL", "flag": "🇱🇰", "name": "BBC Tamil", "url": "https://feeds.bbci.co.uk/tamil/rss.xml"},
     {"lang": "TAMIL", "flag": "🇱🇰", "name": "DW Tamil", "url": "https://rss.dw.com/rdf/rss-ta-all"},
 
-    # --- SINHALA ---
+    # --- SINHALA - Hiru + Derana ---
     {"lang": "SINHALA", "flag": "🇱🇰", "name": "Hiru News", "url": "https://www.hirunews.lk/rss/sinhala.xml"},
     {"lang": "SINHALA", "flag": "🇱🇰", "name": "Ada Derana", "url": "https://sinhala.adaderana.lk/rss.php"},
     {"lang": "SINHALA", "flag": "🇱🇰", "name": "BBC Sinhala", "url": "https://feeds.bbci.co.uk/sinhala/rss.xml"},
     {"lang": "SINHALA", "flag": "🇱🇰", "name": "NewsFirst Sinhala", "url": "https://sinhala.newsfirst.lk/feed"},
+    {"lang": "SINHALA", "flag": "🇱🇰", "name": "Lankadeepa", "url": "https://www.lankadeepa.lk/rss/sinhala.xml"},
 
-    # --- MYANMAR LOCAL ---
+    # --- MYANMAR ---
     {"lang": "MYANMAR", "flag": "🇲🇲", "name": "BBC Burmese", "url": "https://feeds.bbci.co.uk/burmese/rss.xml"},
     {"lang": "MYANMAR", "flag": "🇲🇲", "name": "VOA Burmese", "url": "https://burmese.voanews.com/api/epiqq"},
     {"lang": "MYANMAR", "flag": "🇲🇲", "name": "Irrawaddy Burmese", "url": "https://burma.irrawaddy.com/rss.xml"},
@@ -61,12 +87,14 @@ FEEDS = [
     {"lang": "MYANMAR", "flag": "🇲🇲", "name": "DVB Myanmar", "url": "https://www.dvb.no/feed"},
     {"lang": "MYANMAR", "flag": "🇲🇲", "name": "Mizzima", "url": "https://www.mizzima.com/feed"},
     {"lang": "MYANMAR", "flag": "🇲🇲", "name": "Myanmar Now", "url": "https://www.myanmar-now.org/en/rss.xml"},
+    {"lang": "MYANMAR", "flag": "🇲🇲", "name": "RFA Burmese", "url": "https://www.rfa.org/burmese/rss2.xml"},
 
     # --- PHILIPPINES ---
     {"lang": "PHILIPPINES", "flag": "🇵🇭", "name": "GMA News", "url": "https://www.gmanetwork.com/news/rss/"},
     {"lang": "PHILIPPINES", "flag": "🇵🇭", "name": "Inquirer", "url": "https://www.inquirer.net/fullfeed"},
     {"lang": "PHILIPPINES", "flag": "🇵🇭", "name": "Rappler", "url": "https://www.rappler.com/feed/"},
     {"lang": "PHILIPPINES", "flag": "🇵🇭", "name": "ABS-CBN News", "url": "https://news.abs-cbn.com/rss"},
+    {"lang": "PHILIPPINES", "flag": "🇵🇭", "name": "PhilStar", "url": "https://www.philstar.com/rss/headlines"},
 
     # --- INDONESIA ---
     {"lang": "INDONESIA", "flag": "🇮🇩", "name": "BBC Indonesia", "url": "https://feeds.bbci.co.uk/indonesia/rss.xml"},
@@ -74,25 +102,9 @@ FEEDS = [
     {"lang": "INDONESIA", "flag": "🇮🇩", "name": "Kompas", "url": "https://www.kompas.com/rss"},
     {"lang": "INDONESIA", "flag": "🇮🇩", "name": "Detik", "url": "https://rss.detik.com/"},
     {"lang": "INDONESIA", "flag": "🇮🇩", "name": "Tempo", "url": "https://rss.tempo.co/"},
+    {"lang": "INDONESIA", "flag": "🇮🇩", "name": "Antara News", "url": "https://en.antaranews.com/rss"},
 
-    # --- COLOMBIA ---
-    {"lang": "COLOMBIA", "flag": "🇨🇴", "name": "El Tiempo Colombia", "url": "https://www.eltiempo.com/rss.xml"},
-    {"lang": "COLOMBIA", "flag": "🇨🇴", "name": "El Espectador", "url": "https://www.elespectador.com/rss.xml"},
-    {"lang": "COLOMBIA", "flag": "🇨🇴", "name": "Semana Colombia", "url": "https://www.semana.com/rss.xml"},
-    {"lang": "COLOMBIA", "flag": "🇨🇴", "name": "Caracol Noticias", "url": "https://noticias.caracoltv.com/rss.xml"},
-
-    # --- MEXICO / BRAZIL / ARGENTINA / LATIN ---
-    {"lang": "MEXICO", "flag": "🇲🇽", "name": "El Universal Mexico", "url": "https://www.eluniversal.com.mx/rss.xml"},
-    {"lang": "MEXICO", "flag": "🇲🇽", "name": "Milenio Mexico", "url": "https://www.milenio.com/rss.xml"},
-    {"lang": "BRAZIL", "flag": "🇧🇷", "name": "G1 Brazil", "url": "https://g1.globo.com/rss/g1/"},
-    {"lang": "BRAZIL", "flag": "🇧🇷", "name": "BBC Brasil", "url": "https://feeds.bbci.co.uk/portuguese/rss.xml"},
-    {"lang": "ARGENTINA", "flag": "🇦🇷", "name": "Clarin Argentina", "url": "https://www.clarin.com/rss.xml"},
-    {"lang": "ARGENTINA", "flag": "🇦🇷", "name": "Infobae Argentina", "url": "https://www.infobae.com/america/rss/"},
-    {"lang": "CHILE", "flag": "🇨🇱", "name": "Emol Chile", "url": "https://www.emol.com/rss.xml"},
-    {"lang": "PERU", "flag": "🇵🇪", "name": "El Comercio Peru", "url": "https://elcomercio.pe/rss/"},
-    {"lang": "LATIN", "flag": "🌎", "name": "CNN Espanol", "url": "https://cnnespanol.cnn.com/feed/"},
-
-    # --- CHINA - NEW ---
+    # --- CHINA ---
     {"lang": "CHINA", "flag": "🇨🇳", "name": "BBC Chinese", "url": "https://feeds.bbci.co.uk/zhongwen/simp/rss.xml"},
     {"lang": "CHINA", "flag": "🇨🇳", "name": "BBC Chinese Trad", "url": "https://feeds.bbci.co.uk/zhongwen/trad/rss.xml"},
     {"lang": "CHINA", "flag": "🇨🇳", "name": "DW Chinese", "url": "https://rss.dw.com/rdf/rss-zh-cn-all"},
@@ -104,25 +116,19 @@ FEEDS = [
     {"lang": "CHINA", "flag": "🇨🇳", "name": "VOA Chinese", "url": "https://www.voachinese.com/api/epiqq"},
     {"lang": "CHINA", "flag": "🇨🇳", "name": "RFA Chinese", "url": "https://www.rfa.org/mandarin/rss2.xml"},
 
-    # --- EUROPE - UK ---
+    # --- EUROPE ---
     {"lang": "UK", "flag": "🇬🇧", "name": "BBC UK", "url": "https://feeds.bbci.co.uk/news/uk/rss.xml"},
     {"lang": "UK", "flag": "🇬🇧", "name": "The Guardian UK", "url": "https://www.theguardian.com/uk/rss"},
     {"lang": "UK", "flag": "🇬🇧", "name": "Sky News UK", "url": "https://feeds.skynews.com/feeds/rss/home.xml"},
     {"lang": "UK", "flag": "🇬🇧", "name": "Daily Mail UK", "url": "https://www.dailymail.co.uk/home/index.rss"},
-
-    # --- EUROPE - FRANCE ---
     {"lang": "FRANCE", "flag": "🇫🇷", "name": "France 24 English", "url": "https://www.france24.com/en/rss"},
     {"lang": "FRANCE", "flag": "🇫🇷", "name": "France 24 French", "url": "https://www.france24.com/fr/rss"},
     {"lang": "FRANCE", "flag": "🇫🇷", "name": "Le Monde French", "url": "https://www.lemonde.fr/rss/une.xml"},
     {"lang": "FRANCE", "flag": "🇫🇷", "name": "BBC French", "url": "https://feeds.bbci.co.uk/french/rss.xml"},
-
-    # --- EUROPE - GERMANY ---
     {"lang": "GERMANY", "flag": "🇩🇪", "name": "DW English", "url": "https://rss.dw.com/rdf/rss-en-all"},
     {"lang": "GERMANY", "flag": "🇩🇪", "name": "DW German", "url": "https://rss.dw.com/rdf/rss-de-all"},
     {"lang": "GERMANY", "flag": "🇩🇪", "name": "Tagesschau Germany", "url": "https://www.tagesschau.de/xml/rss2/"},
     {"lang": "GERMANY", "flag": "🇩🇪", "name": "Spiegel Germany", "url": "https://www.spiegel.de/schlagzeilen/index.rss"},
-
-    # --- EUROPE - ITALY / SPAIN / OTHERS ---
     {"lang": "ITALY", "flag": "🇮🇹", "name": "ANSA Italy", "url": "https://www.ansa.it/sito/ansait_rss.xml"},
     {"lang": "ITALY", "flag": "🇮🇹", "name": "BBC Italian", "url": "https://feeds.bbci.co.uk/italian/rss.xml"},
     {"lang": "SPAIN", "flag": "🇪🇸", "name": "El Pais Spain", "url": "https://feeds.elpais.com/meridian/rss"},
@@ -136,6 +142,114 @@ FEEDS = [
     {"lang": "TURKEY", "flag": "🇹🇷", "name": "BBC Turkish", "url": "https://feeds.bbci.co.uk/turkish/rss.xml"},
     {"lang": "EUROPE", "flag": "🇪🇺", "name": "Euronews", "url": "https://www.euronews.com/rss?format=mrss&level=theme&name=news"},
     {"lang": "EUROPE", "flag": "🇪🇺", "name": "Politico Europe", "url": "https://www.politico.eu/feed/"},
+
+    # --- WEST ASIA / MIDDLE EAST ---
+    {"lang": "WEST ASIA", "flag": "🌍", "name": "BBC Arabic", "url": "https://feeds.bbci.co.uk/arabic/rss.xml"},
+    {"lang": "WEST ASIA", "flag": "🌍", "name": "DW Arabic", "url": "https://rss.dw.com/rdf/rss-ar-all"},
+    {"lang": "WEST ASIA", "flag": "🌍", "name": "Al Jazeera Arabic", "url": "https://www.aljazeera.net/aljazeera/rss"},
+    {"lang": "WEST ASIA", "flag": "🌍", "name": "Al Arabiya English", "url": "https://english.alarabiya.net/feed/rss2.xml"},
+    {"lang": "WEST ASIA", "flag": "🌍", "name": "Al Arabiya Arabic", "url": "https://www.alarabiya.net/feed/rss2.xml"},
+    {"lang": "WEST ASIA", "flag": "🌍", "name": "Middle East Eye", "url": "https://www.middleeasteye.net/rss"},
+    {"lang": "SAUDI", "flag": "🇸🇦", "name": "Arab News Saudi", "url": "https://www.arabnews.com/rss.xml"},
+    {"lang": "SAUDI", "flag": "🇸🇦", "name": "Saudi Gazette", "url": "https://saudigazette.com.sa/rss.xml"},
+    {"lang": "SAUDI", "flag": "🇸🇦", "name": "Saudi Press Agency", "url": "https://www.spa.gov.sa/rss.xml"},
+    {"lang": "UAE", "flag": "🇦🇪", "name": "Gulf News UAE", "url": "https://gulfnews.com/rss"},
+    {"lang": "UAE", "flag": "🇦🇪", "name": "Khaleej Times UAE", "url": "https://www.khaleejtimes.com/rss"},
+    {"lang": "UAE", "flag": "🇦🇪", "name": "The National UAE", "url": "https://www.thenationalnews.com/rss"},
+    {"lang": "QATAR", "flag": "🇶🇦", "name": "Al Jazeera Qatar", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
+    {"lang": "QATAR", "flag": "🇶🇦", "name": "Gulf Times Qatar", "url": "https://www.gulf-times.com/rss.xml"},
+    {"lang": "QATAR", "flag": "🇶🇦", "name": "The Peninsula Qatar", "url": "https://www.thepeninsulaqatar.com/rss"},
+    {"lang": "ISRAEL", "flag": "🇮🇱", "name": "Times of Israel", "url": "https://www.timesofisrael.com/feed/"},
+    {"lang": "ISRAEL", "flag": "🇮🇱", "name": "Jerusalem Post", "url": "https://www.jpost.com/rss/rssfeedsfrontpage.aspx"},
+    {"lang": "ISRAEL", "flag": "🇮🇱", "name": "Haaretz Israel", "url": "https://www.haaretz.com/feed"},
+    {"lang": "ISRAEL", "flag": "🇮🇱", "name": "Ynet Israel", "url": "https://www.ynetnews.com/category/3082/rss2.xml"},
+    {"lang": "IRAN", "flag": "🇮🇷", "name": "Tehran Times Iran", "url": "https://www.tehrantimes.com/rss"},
+    {"lang": "IRAN", "flag": "🇮🇷", "name": "Press TV Iran", "url": "https://www.presstv.ir/RSS"},
+    {"lang": "IRAN", "flag": "🇮🇷", "name": "BBC Persian", "url": "https://feeds.bbci.co.uk/persian/rss.xml"},
+    {"lang": "IRAN", "flag": "🇮🇷", "name": "Iran International", "url": "https://www.iranintl.com/en/feed"},
+    {"lang": "IRAQ", "flag": "🇮🇶", "name": "Iraq News", "url": "https://www.iraqinews.com/feed/"},
+    {"lang": "JORDAN", "flag": "🇯🇴", "name": "Jordan Times", "url": "https://www.jordantimes.com/rss"},
+    {"lang": "LEBANON", "flag": "🇱🇧", "name": "Daily Star Lebanon", "url": "https://www.dailystar.com.lb/rss"},
+    {"lang": "LEBANON", "flag": "🇱🇧", "name": "LBC Lebanon", "url": "https://www.lbcgroup.tv/rss"},
+    {"lang": "SYRIA", "flag": "🇸🇾", "name": "SANA Syria", "url": "https://sana.sy/en/rss.xml"},
+    {"lang": "KUWAIT", "flag": "🇰🇼", "name": "Arab Times Kuwait", "url": "https://www.arabtimesonline.com/feed/"},
+    {"lang": "KUWAIT", "flag": "🇰🇼", "name": "Kuwait Times", "url": "https://www.kuwaittimes.com/feed/"},
+    {"lang": "BAHRAIN", "flag": "🇧🇭", "name": "GDN Bahrain", "url": "https://www.gdnonline.com/rss.xml"},
+    {"lang": "OMAN", "flag": "🇴🇲", "name": "Times of Oman", "url": "https://timesofoman.com/rss"},
+    {"lang": "OMAN", "flag": "🇴🇲", "name": "Muscat Daily Oman", "url": "https://www.muscatdaily.com/rss"},
+    {"lang": "YEMEN", "flag": "🇾🇪", "name": "Yemen Online", "url": "https://www.yemenonline.info/feed/"},
+    {"lang": "PALESTINE", "flag": "🇵🇸", "name": "WAFA Palestine", "url": "https://english.wafa.ps/rss"},
+
+    # --- EAST ASIA ---
+    {"lang": "JAPAN", "flag": "🇯🇵", "name": "NHK Japan", "url": "https://www3.nhk.or.jp/nhkworld/en/news/rss.xml"},
+    {"lang": "JAPAN", "flag": "🇯🇵", "name": "Japan Times", "url": "https://www.japantimes.co.jp/feed/"},
+    {"lang": "JAPAN", "flag": "🇯🇵", "name": "BBC Japanese", "url": "https://feeds.bbci.co.uk/japanese/rss.xml"},
+    {"lang": "JAPAN", "flag": "🇯🇵", "name": "Kyodo News Japan", "url": "https://english.kyodonews.net/rss"},
+    {"lang": "JAPAN", "flag": "🇯🇵", "name": "Asahi Shimbun Japan", "url": "https://www.asahi.com/rss/asahi/newsheadlines.xml"},
+    {"lang": "KOREA", "flag": "🇰🇷", "name": "Korea Herald", "url": "http://www.koreaherald.com/rss/index.xml"},
+    {"lang": "KOREA", "flag": "🇰🇷", "name": "Korea Times", "url": "https://www.koreatimes.co.kr/www/rss/nation.xml"},
+    {"lang": "KOREA", "flag": "🇰🇷", "name": "Yonhap News Korea", "url": "https://en.yna.co.kr/rss/all"},
+    {"lang": "KOREA", "flag": "🇰🇷", "name": "BBC Korean", "url": "https://feeds.bbci.co.uk/korean/rss.xml"},
+    {"lang": "KOREA", "flag": "🇰🇷", "name": "DW Korean", "url": "https://rss.dw.com/rdf/rss-ko-all"},
+    {"lang": "TAIWAN", "flag": "🇹🇼", "name": "Focus Taiwan", "url": "https://focustaiwan.tw/rss"},
+    {"lang": "TAIWAN", "flag": "🇹🇼", "name": "Taipei Times Taiwan", "url": "https://www.taipeitimes.com/xml/index.rss"},
+    {"lang": "TAIWAN", "flag": "🇹🇼", "name": "Taiwan News", "url": "https://www.taiwannews.com.tw/rss"},
+    {"lang": "HONG KONG", "flag": "🇭🇰", "name": "Hong Kong Free Press", "url": "https://hongkongfp.com/feed/"},
+    {"lang": "MONGOLIA", "flag": "🇲🇳", "name": "Montsame Mongolia", "url": "https://montsame.mn/en/rss"},
+    {"lang": "EAST ASIA", "flag": "🌏", "name": "Nikkei Asia", "url": "https://asia.nikkei.com/rss/feed/nar"},
+
+    # --- MEXICO / LATIN ---
+    {"lang": "MEXICO", "flag": "🇲🇽", "name": "El Universal Mexico", "url": "https://www.eluniversal.com.mx/rss.xml"},
+    {"lang": "MEXICO", "flag": "🇲🇽", "name": "Milenio Mexico", "url": "https://www.milenio.com/rss.xml"},
+    {"lang": "MEXICO", "flag": "🇲🇽", "name": "DW Mexico / Latam", "url": "https://rss.dw.com/rdf/rss-es-latam"},
+    {"lang": "LATIN", "flag": "🌎", "name": "CNN Espanol", "url": "https://cnnespanol.cnn.com/feed/"},
+    {"lang": "LATIN", "flag": "🌎", "name": "Telemundo", "url": "https://www.telemundo.com/rss.xml"},
+
+    # --- SOUTH AMERICA ALL ---
+    {"lang": "BRAZIL", "flag": "🇧🇷", "name": "G1 Brazil", "url": "https://g1.globo.com/rss/g1/"},
+    {"lang": "BRAZIL", "flag": "🇧🇷", "name": "Folha Brazil", "url": "https://feeds.folha.uol.com.br/emcimadahora/rss091.xml"},
+    {"lang": "BRAZIL", "flag": "🇧🇷", "name": "BBC Brasil", "url": "https://feeds.bbci.co.uk/portuguese/rss.xml"},
+    {"lang": "BRAZIL", "flag": "🇧🇷", "name": "Estadao Brazil", "url": "https://www.estadao.com.br/rss.xml"},
+    {"lang": "ARGENTINA", "flag": "🇦🇷", "name": "Clarin Argentina", "url": "https://www.clarin.com/rss.xml"},
+    {"lang": "ARGENTINA", "flag": "🇦🇷", "name": "La Nacion Argentina", "url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/"},
+    {"lang": "ARGENTINA", "flag": "🇦🇷", "name": "Infobae Argentina", "url": "https://www.infobae.com/america/rss/"},
+    {"lang": "COLOMBIA", "flag": "🇨🇴", "name": "El Tiempo Colombia", "url": "https://www.eltiempo.com/rss.xml"},
+    {"lang": "COLOMBIA", "flag": "🇨🇴", "name": "El Espectador", "url": "https://www.elespectador.com/rss.xml"},
+    {"lang": "COLOMBIA", "flag": "🇨🇴", "name": "Semana Colombia", "url": "https://www.semana.com/rss.xml"},
+    {"lang": "COLOMBIA", "flag": "🇨🇴", "name": "Caracol Noticias", "url": "https://noticias.caracoltv.com/rss.xml"},
+    {"lang": "COLOMBIA", "flag": "🇨🇴", "name": "RCN Noticias", "url": "https://www.noticiasrcn.com/rss.xml"},
+    {"lang": "COLOMBIA", "flag": "🇨🇴", "name": "Blu Radio Colombia", "url": "https://www.bluradio.com/rss.xml"},
+    {"lang": "CHILE", "flag": "🇨🇱", "name": "Emol Chile", "url": "https://www.emol.com/rss.xml"},
+    {"lang": "CHILE", "flag": "🇨🇱", "name": "La Tercera Chile", "url": "https://www.latercera.com/rss.xml"},
+    {"lang": "CHILE", "flag": "🇨🇱", "name": "BioBio Chile", "url": "https://www.biobiochile.cl/rss.xml"},
+    {"lang": "CHILE", "flag": "🇨🇱", "name": "Cooperativa Chile", "url": "https://www.cooperativa.cl/rss.xml"},
+    {"lang": "PERU", "flag": "🇵🇪", "name": "El Comercio Peru", "url": "https://elcomercio.pe/rss/"},
+    {"lang": "PERU", "flag": "🇵🇪", "name": "RPP Peru", "url": "https://rpp.pe/rss.xml"},
+    {"lang": "PERU", "flag": "🇵🇪", "name": "La Republica Peru", "url": "https://larepublica.pe/rss.xml"},
+    {"lang": "PERU", "flag": "🇵🇪", "name": "Gestion Peru", "url": "https://gestion.pe/rss.xml"},
+    {"lang": "VENEZUELA", "flag": "🇻🇪", "name": "El Nacional Venezuela", "url": "https://www.elnacional.com/rss/"},
+    {"lang": "VENEZUELA", "flag": "🇻🇪", "name": "El Universal Venezuela", "url": "https://www.eluniversal.com/rss.xml"},
+    {"lang": "VENEZUELA", "flag": "🇻🇪", "name": "Telesur Venezuela", "url": "https://www.telesurtv.net/rss.xml"},
+    {"lang": "VENEZUELA", "flag": "🇻🇪", "name": "Efecto Cocuyo Venezuela", "url": "https://efectococuyo.com/feed/"},
+    {"lang": "ECUADOR", "flag": "🇪🇨", "name": "El Comercio Ecuador", "url": "https://www.elcomercio.com/rss.xml"},
+    {"lang": "ECUADOR", "flag": "🇪🇨", "name": "El Universo Ecuador", "url": "https://www.eluniverso.com/rss.xml"},
+    {"lang": "ECUADOR", "flag": "🇪🇨", "name": "Primicias Ecuador", "url": "https://www.primicias.ec/rss.xml"},
+    {"lang": "BOLIVIA", "flag": "🇧🇴", "name": "El Deber Bolivia", "url": "https://eldeber.com.bo/rss.xml"},
+    {"lang": "BOLIVIA", "flag": "🇧🇴", "name": "Los Tiempos Bolivia", "url": "https://www.lostiempos.com/rss.xml"},
+    {"lang": "BOLIVIA", "flag": "🇧🇴", "name": "Pagina Siete Bolivia", "url": "https://www.paginasiete.bo/rss.xml"},
+    {"lang": "PARAGUAY", "flag": "🇵🇾", "name": "ABC Paraguay", "url": "https://www.abc.com.py/rss.xml"},
+    {"lang": "PARAGUAY", "flag": "🇵🇾", "name": "Ultima Hora Paraguay", "url": "https://www.ultimahora.com/rss.xml"},
+    {"lang": "PARAGUAY", "flag": "🇵🇾", "name": "La Nacion Paraguay", "url": "https://www.lanacion.com.py/rss.xml"},
+    {"lang": "URUGUAY", "flag": "🇺🇾", "name": "El Pais Uruguay", "url": "https://www.elpais.com.uy/rss.xml"},
+    {"lang": "URUGUAY", "flag": "🇺🇾", "name": "El Observador Uruguay", "url": "https://www.elobservador.com.uy/rss.xml"},
+    {"lang": "URUGUAY", "flag": "🇺🇾", "name": "Montevideo Portal", "url": "https://www.montevideo.com.uy/rss.xml"},
+    {"lang": "GUYANA", "flag": "🇬🇾", "name": "Stabroek News Guyana", "url": "https://www.stabroeknews.com/feed/"},
+    {"lang": "GUYANA", "flag": "🇬🇾", "name": "Guyana Chronicle", "url": "https://guyanachronicle.com/feed/"},
+    {"lang": "SURINAME", "flag": "🇸🇷", "name": "Suriname Herald", "url": "https://www.surinameherald.com/feed/"},
+    {"lang": "SURINAME", "flag": "🇸🇷", "name": "Starnieuws Suriname", "url": "https://www.starnieuws.com/rss.xml"},
+    {"lang": "FRENCH GUIANA", "flag": "🇬🇫", "name": "France Guyane", "url": "https://www.franceguyane.fr/rss.xml"},
+    {"lang": "SOUTH AMERICA", "flag": "🌎", "name": "BBC Mundo", "url": "https://feeds.bbci.co.uk/mundo/rss.xml"},
+    {"lang": "SOUTH AMERICA", "flag": "🌎", "name": "DW Espanol Latam", "url": "https://rss.dw.com/rdf/rss-es-latam"},
 ]
 
 seen = set()
@@ -145,7 +259,7 @@ def make_text(feed_info, title, link):
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "🌍 Bot is running! News every 5 min.\n\nRegions: World, China, Europe (UK, France, Germany, Italy, Spain, Netherlands, Poland, Ukraine, Turkey), Latin, Asia\n\n⚡ Powered by https://t.me/bigolive_asia"
+        "🌍 Bot is running! News every 5 min.\n\nAll Regions: India, World, Sinhala, Myanmar, Philippines, Indonesia, China, Europe, West Asia, East Asia, Latin, South America\n\n⚡ Powered by https://t.me/bigolive_asia"
     )
 
 async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE):
