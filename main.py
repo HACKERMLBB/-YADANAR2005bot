@@ -9,11 +9,6 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 from telegram.constants import ParseMode
 
 # --- FIX FOR PYTHON 3.14: No event loop in MainThread ---
-try:
-    asyncio.set_event_loop(asyncio.new_event_loop())
-except RuntimeError:
-    pass
-# ---------------------------------------------------------
 
 # --- Flask Port Fix ---
 app_flask = Flask(__name__)
@@ -497,16 +492,15 @@ async def auto_loop(bot):
 async def post_init(app):
     asyncio.create_task(auto_loop(app.bot))
 
-def main():
-    try:
-        asyncio.get_event_loop()
-    except RuntimeError:
-        asyncio.set_event_loop(asyncio.new_event_loop())
+async def main_async():
     app = Application.builder().token(BOT_TOKEN).post_init(post_init).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("latest", latest))
     print("Bot Started - Auto + Commands")
-    app.run_polling()
+    await app.initialize()
+    await app.start()
+    await app.updater.start_polling()
+    await asyncio.Event().wait()
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main_async())
