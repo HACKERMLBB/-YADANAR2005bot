@@ -8,6 +8,13 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 from telegram.constants import ParseMode
 
+# --- FIX FOR PYTHON 3.14: No event loop in MainThread ---
+try:
+    asyncio.set_event_loop(asyncio.new_event_loop())
+except RuntimeError:
+    pass
+# ---------------------------------------------------------
+
 # --- Flask Port Fix ---
 app_flask = Flask(__name__)
 @app_flask.route('/')
@@ -15,7 +22,8 @@ def home():
     return "Bot is Running!"
 def run_flask():
     port = int(os.environ.get("PORT", 10000))
-    app_flask.run(host="0.0.0.0", port=port)
+    # use_reloader=False දාන්න ඕන, නැත්නම් thread 2ක් හැදෙනවා
+    app_flask.run(host="0.0.0.0", port=port, use_reloader=False)
 threading.Thread(target=run_flask, daemon=True).start()
 # ----------------------
 
@@ -417,6 +425,11 @@ async def post_init(app):
     asyncio.create_task(auto_loop(app.bot))
 
 def main():
+    # --- FIX: MainThread එකට අලුත් loop එකක් දෙනවා ---
+    try:
+        asyncio.get_event_loop()
+    except RuntimeError:
+        asyncio.set_event_loop(asyncio.new_event_loop())
     app = Application.builder().token(BOT_TOKEN).post_init(post_init).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("latest", latest))
