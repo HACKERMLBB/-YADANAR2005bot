@@ -28,10 +28,10 @@ CHANNEL_IDS = [c.strip() for c in CHANNEL_IDS if c.strip()]
 
 BOT_USERNAME = os.environ.get("BOT_USERNAME", "YADANAR2005bot")
 
-# --- මේ Function එක විතරයි හැදුවේ, අනිත් ඔක්කොම ඔයා එවපු විදිහටමයි ---
 def get_country_button():
     url = f"https://t.me/{BOT_USERNAME}?start=countries"
-    return InlineKeyboardMarkup(inline_keyboard=InlineKeyboardButton("🔍 Find Your Country News", url=url))
+    keyboard = InlineKeyboardButton("🔍 Find Your Country News", url=url)
+    return InlineKeyboardMarkup(keyboard)
 
 FEEDS = [
     {"lang": "ENGLISH", "flag": "🇬🇧", "name": "BBC", "url": "https://feeds.bbci.co.uk/news/world/rss.xml"},
