@@ -1,3 +1,4 @@
+# File Name: Main.py
 import os
 import asyncio
 import feedparser
@@ -7,6 +8,12 @@ import threading
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 from telegram.constants import ParseMode
+
+# --- මේ ටික අනිවාර්යයි, නැත්නම් Render එකේ Crash වෙනවා ---
+try:
+    asyncio.set_event_loop(asyncio.new_event_loop())
+except RuntimeError:
+    pass
 
 app_flask = Flask(__name__)
 @app_flask.route('/')
@@ -133,6 +140,11 @@ async def post_init(app):
     asyncio.create_task(auto_loop(app.bot))
 
 def main():
+    # --- main එක ඇතුලෙත් Loop එක හදනවා, 100% Crash වෙන්නේ නෑ ---
+    try:
+        asyncio.get_event_loop()
+    except RuntimeError:
+        asyncio.set_event_loop(asyncio.new_event_loop())
     app = Application.builder().token(BOT_TOKEN).post_init(post_init).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("news", news_country))
