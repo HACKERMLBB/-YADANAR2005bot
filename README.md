@@ -1,57 +1,67 @@
-# 🌍 YADANAR - World News Bot
+# 🌍 ŸᗅĐᗅŇᗅᏒ💗 - World News Bot
 
-Auto World News Bot for Telegram Channel. Posts breaking news automatically in 4 languages.
+> **The World's Biggest News Bot - 195 Countries + 40 Territories In One Place!**
 
-⚡ Powered by [@bigolive_asia](https://t.me/bigolive_asia)
+[[Telegram Bot](https://img.shields.io/badge/Telegram-Bot-blue?logo=telegram)](https://t.me/YADANAR2005bot)
+[[Channel](https://img.shields.io/badge/Channel-@bigolive_asia-0088cc?logo=telegram)](https://t.me/bigolive_asia)
+[[Python](https://img.shields.io/badge/Python-3.9+-yellow?logo=python)](https://www.python.org/)
+[[License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[[Updates](https://img.shields.io/badge/Updates-Every_3_Min-red)]()
+
+---
+
+## 🤖 Try The Bot
+
+**Bot:** [@YADANAR2005bot](https://t.me/YADANAR2005bot)  
+**Channel:** [@bigolive_asia](https://t.me/bigolive_asia)
+
+---
 
 ## ✨ Features
 
-- 📰 Auto Post News Every 5 Minutes
-- 🌐 4 Languages - English, Spanish, Russian, Myanmar
-- 📡 10+ Trusted Sources - BBC, CNN, Fox News, Al Jazeera, Reuters, DW
-- 🤖 Commands - `/start` & `/latest`
-- 🚫 No Duplicate News
-
-## 📰 News Sources
-
-| Language | Sources |
+| Feature | Description |
 | :--- | :--- |
-| 🇬🇧 ENGLISH | BBC, CNN, Fox News, Al Jazeera, Reuters |
-| 🇪🇸 SPANISH | BBC Mundo, DW Espanol |
-| 🇷🇺 RUSSIAN | BBC Russian, DW Russian |
-| 🇲🇲 MYANMAR | BBC Burmese |
+| 🌍 **195 Countries** | Asia, Europe, Americas, Africa, Oceania - All Covered |
+| 🏔️ **40+ Territories** | Tibet, Hong Kong, Puerto Rico, Greenland, Kashmir & More |
+| ⚡ **Auto Updates** | Channel Auto Updates Every 3 Minutes |
+| 📰 **250+ News Feeds** | BBC, CNN, Reuters, Al Jazeera, AP News & More |
+| 🌐 **Multi Language** | Sinhala, English, Hindi, Thai, Burmese |
+| 🔍 **Search By Country** | `/news Japan` - Get Any Country News Instantly |
 
-## 🤖 Bot Commands
+---
 
-- `/start` - Check if bot is running
-- `/latest` - Get latest news instantly
+## 📌 Commands
 
-## 🚀 Deploy on Render
-
-1. Fork this repo
-2. Go to [Render.com](https://render.com) > New Web Service
-3. Connect this repo
-4. Set Build Command: `pip install -r requirements.txt`
-5. Set Start Command: `python main.py`
-
-### 🔑 Environment Variables
-
-Add these in Render > Environment:
-
-| Variable | Example |
+| Command | Usage |
 | :--- | :--- |
-| `BOT_TOKEN` | `123456:ABC-YourBotToken` |
-| `CHANNEL_IDS` | `-1001234567890` |
+| `/start` | Start the Bot |
+| `/news <Country>` | Get News By Country - Ex: `/news Japan` |
+| `/countries` | See All Countries List |
+| `/latest` | Latest Top News |
+| `/help` | How To Use Bot |
 
-> Get `BOT_TOKEN` from [@BotFather](https://t.me/BotFather)
-> Get `CHANNEL_IDS` - Add bot as Admin to your Channel
+---
 
-## 📦 Requirements
+## 🌎 Coverage
 
-- `python-telegram-bot`
-- `feedparser`
-- `Flask`
+### Asia - 53 Feeds
+China, Japan, Korea, India, Pakistan, Thailand, Myanmar, Vietnam, Indonesia, Malaysia, Singapore, Sri Lanka + More
 
-## 📝 License
+### Europe - 57 Feeds
+UK, France, Germany, Italy, Spain, Ukraine, Russia, Poland, Netherlands + More
 
-Free to use. Credit to [@bigolive_asia](https://t.me/bigolive_asia)
+### Americas - 53 Feeds
+USA, Canada, Mexico, Brazil, Argentina, Colombia, Chile, Cuba, Jamaica + More
+
+### Africa - 54 Feeds
+Egypt, Nigeria, Kenya, South Africa, Ethiopia, Ghana, Morocco + More
+
+### Oceania - 16 Feeds
+Australia, New Zealand, Fiji, Papua New Guinea, Samoa, Tonga + More
+
+### Territories - 40+ Feeds
+Tibet, Hong Kong, Macau, Kashmir, Kurdistan, Puerto Rico, Greenland, Aruba, Guam, French Polynesia + More
+
+---
+
+## 📸 Preview
