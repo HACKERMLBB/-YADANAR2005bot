@@ -9,7 +9,6 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 from telegram.constants import ParseMode
 
-# --- මේ ටික අනිවාර්යයි, නැත්නම් Render එකේ Crash වෙනවා ---
 try:
     asyncio.set_event_loop(asyncio.new_event_loop())
 except RuntimeError:
@@ -29,31 +28,97 @@ CHANNEL_IDS = [c.strip() for c in os.environ.get("CHANNEL_IDS", "").split(",") i
 OWNER_ID = os.environ.get("OWNER_ID", "").strip()
 
 FEEDS = [
+    # --- ENGLISH GLOBAL ---
     {"lang": "WORLD", "flag": "🌍", "name": "BBC World", "url": "https://feeds.bbci.co.uk/news/world/rss.xml"},
     {"lang": "WORLD", "flag": "🌍", "name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
+    {"lang": "WORLD", "flag": "🌍", "name": "CNN", "url": "http://rss.cnn.com/rss/edition.rss"},
+    {"lang": "WORLD", "flag": "🌍", "name": "Sky News", "url": "https://feeds.skynews.com/feeds/rss/world.xml"},
+    {"lang": "WORLD", "flag": "🌍", "name": "Reuters", "url": "https://feeds.reuters.com/reuters/worldNews"},
+    {"lang": "WORLD", "flag": "🌍", "name": "AP News", "url": "https://apnews.com/rss"},
+    {"lang": "WORLD", "flag": "🌍", "name": "France 24", "url": "https://www.france24.com/en/rss"},
+    {"lang": "WORLD", "flag": "🌍", "name": "DW News", "url": "https://rss.dw.com/rdf/rss-en-all"},
+    {"lang": "WORLD", "flag": "🌍", "name": "Euronews", "url": "https://www.euronews.com/rss?format=mrss&level=theme&name=news"},
+    {"lang": "WORLD", "flag": "🌍", "name": "NBC News", "url": "https://feeds.nbcnews.com/nbcnews/public/news"},
+    {"lang": "WORLD", "flag": "🌍", "name": "ABC News", "url": "https://abcnews.go.com/abcnews/topstories"},
+    {"lang": "WORLD", "flag": "🌍", "name": "CBS News", "url": "https://www.cbsnews.com/latest/rss/main"},
+    {"lang": "WORLD", "flag": "🌍", "name": "Fox News", "url": "https://moxie.foxnews.com/google-publisher/latest.xml"},
+    {"lang": "WORLD", "flag": "🌍", "name": "The Guardian", "url": "https://www.theguardian.com/world/rss"},
+    {"lang": "WORLD", "flag": "🌍", "name": "New York Times", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"},
+    {"lang": "WORLD", "flag": "🌍", "name": "CGTN", "url": "https://www.cgtn.com/subscribe/rss/section/world.xml"},
+    {"lang": "WORLD", "flag": "🌍", "name": "WION", "url": "https://www.wionews.com/rss/world.xml"},
+    {"lang": "WORLD", "flag": "🌍", "name": "ABC Australia", "url": "https://www.abc.net.au/news/feed/51120/rss.xml"},
+
+    # --- SRI LANKA / SINHALA ---
     {"lang": "SRI LANKA", "flag": "🇱🇰", "name": "Sri Lanka", "url": "https://news.google.com/rss/search?q=Sri+Lanka&hl=en&gl=LK&ceid=LK:en"},
     {"lang": "SINHALA", "flag": "🇱🇰", "name": "BBC Sinhala", "url": "https://feeds.bbci.co.uk/sinhala/rss.xml"},
     {"lang": "SINHALA", "flag": "🇱🇰", "name": "Lanka Sinhala", "url": "https://news.google.com/rss/search?q=Sri+Lanka&hl=si&gl=LK&ceid=LK:si"},
-    {"lang": "MYANMAR", "flag": "🇲🇲", "name": "BBC Burmese", "url": "https://feeds.bbci.co.uk/burmese/rss.xml"},
-    {"lang": "MYANMAR", "flag": "🇲🇲", "name": "Myanmar News", "url": "https://news.google.com/rss/search?q=Myanmar&hl=en&gl=MM&ceid=MM:en"},
-    {"lang": "INDIA", "flag": "🇮🇳", "name": "India News", "url": "https://news.google.com/rss/search?q=India&hl=en&gl=IN&ceid=IN:en"},
-    {"lang": "INDIA", "flag": "🇮🇳", "name": "BBC Hindi", "url": "https://feeds.bbci.co.uk/hindi/rss.xml"},
-    {"lang": "THAILAND", "flag": "🇹🇭", "name": "Thailand News", "url": "https://news.google.com/rss/search?q=Thailand&hl=en&gl=TH&ceid=TH:en"},
-    {"lang": "THAILAND", "flag": "🇹🇭", "name": "BBC Thai", "url": "https://feeds.bbci.co.uk/thai/rss.xml"},
+
+    # --- EAST ASIA ---
+    {"lang": "CHINA", "flag": "🇨🇳", "name": "China News", "url": "https://news.google.com/rss/search?q=China&hl=en&gl=CN&ceid=CN:en"},
     {"lang": "JAPAN", "flag": "🇯🇵", "name": "Japan News", "url": "https://news.google.com/rss/search?q=Japan&hl=en&gl=JP&ceid=JP:en"},
     {"lang": "KOREA", "flag": "🇰🇷", "name": "Korea News", "url": "https://news.google.com/rss/search?q=Korea&hl=en&gl=KR&ceid=KR:en"},
-    {"lang": "CHINA", "flag": "🇨🇳", "name": "China News", "url": "https://news.google.com/rss/search?q=China&hl=en&gl=CN&ceid=CN:en"},
+    {"lang": "NORTH KOREA", "flag": "🇰🇵", "name": "North Korea News", "url": "https://news.google.com/rss/search?q=North+Korea&hl=en&gl=KP&ceid=KP:en"},
+    {"lang": "TAIWAN", "flag": "🇹🇼", "name": "Taiwan News", "url": "https://news.google.com/rss/search?q=Taiwan&hl=en&gl=TW&ceid=TW:en"},
+    {"lang": "MONGOLIA", "flag": "🇲🇳", "name": "Mongolia News", "url": "https://news.google.com/rss/search?q=Mongolia&hl=en&gl=MN&ceid=MN:en"},
+
+    # --- SOUTHEAST ASIA ---
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "Thailand News", "url": "https://news.google.com/rss/search?q=Thailand&hl=en&gl=TH&ceid=TH:en"},
+    {"lang": "THAILAND", "flag": "🇹🇭", "name": "BBC Thai", "url": "https://feeds.bbci.co.uk/thai/rss.xml"},
+    {"lang": "MYANMAR", "flag": "🇲🇲", "name": "BBC Burmese", "url": "https://feeds.bbci.co.uk/burmese/rss.xml"},
+    {"lang": "MYANMAR", "flag": "🇲🇲", "name": "Myanmar News", "url": "https://news.google.com/rss/search?q=Myanmar&hl=en&gl=MM&ceid=MM:en"},
+    {"lang": "VIETNAM", "flag": "🇻🇳", "name": "Vietnam News", "url": "https://news.google.com/rss/search?q=Vietnam&hl=en&gl=VN&ceid=VN:en"},
+    {"lang": "PHILIPPINES", "flag": "🇵🇭", "name": "Philippines News", "url": "https://news.google.com/rss/search?q=Philippines&hl=en&gl=PH&ceid=PH:en"},
+    {"lang": "INDONESIA", "flag": "🇮🇩", "name": "Indonesia News", "url": "https://news.google.com/rss/search?q=Indonesia&hl=en&gl=ID&ceid=ID:en"},
+    {"lang": "MALAYSIA", "flag": "🇲🇾", "name": "Malaysia News", "url": "https://news.google.com/rss/search?q=Malaysia&hl=en&gl=MY&ceid=MY:en"},
+    {"lang": "SINGAPORE", "flag": "🇸🇬", "name": "Singapore News", "url": "https://news.google.com/rss/search?q=Singapore&hl=en&gl=SG&ceid=SG:en"},
+    {"lang": "CAMBODIA", "flag": "🇰🇭", "name": "Cambodia News", "url": "https://news.google.com/rss/search?q=Cambodia&hl=en&gl=KH&ceid=KH:en"},
+    {"lang": "LAOS", "flag": "🇱🇦", "name": "Laos News", "url": "https://news.google.com/rss/search?q=Laos&hl=en&gl=LA&ceid=LA:en"},
+    {"lang": "BRUNEI", "flag": "🇧🇳", "name": "Brunei News", "url": "https://news.google.com/rss/search?q=Brunei&hl=en&gl=BN&ceid=BN:en"},
+    {"lang": "TIMOR-LESTE", "flag": "🇹🇱", "name": "Timor-Leste News", "url": "https://news.google.com/rss/search?q=Timor+Leste&hl=en&gl=TL&ceid=TL:en"},
+
+    # --- SOUTH ASIA ---
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "India News", "url": "https://news.google.com/rss/search?q=India&hl=en&gl=IN&ceid=IN:en"},
+    {"lang": "INDIA", "flag": "🇮🇳", "name": "BBC Hindi", "url": "https://feeds.bbci.co.uk/hindi/rss.xml"},
+    {"lang": "PAKISTAN", "flag": "🇵🇰", "name": "Pakistan News", "url": "https://news.google.com/rss/search?q=Pakistan&hl=en&gl=PK&ceid=PK:en"},
+    {"lang": "BANGLADESH", "flag": "🇧🇩", "name": "Bangladesh News", "url": "https://news.google.com/rss/search?q=Bangladesh&hl=en&gl=BD&ceid=BD:en"},
+    {"lang": "NEPAL", "flag": "🇳🇵", "name": "Nepal News", "url": "https://news.google.com/rss/search?q=Nepal&hl=en&gl=NP&ceid=NP:en"},
+    {"lang": "BHUTAN", "flag": "🇧🇹", "name": "Bhutan News", "url": "https://news.google.com/rss/search?q=Bhutan&hl=en&gl=BT&ceid=BT:en"},
+    {"lang": "MALDIVES", "flag": "🇲🇻", "name": "Maldives News", "url": "https://news.google.com/rss/search?q=Maldives&hl=en&gl=MV&ceid=MV:en"},
+    {"lang": "AFGHANISTAN", "flag": "🇦🇫", "name": "Afghanistan News", "url": "https://news.google.com/rss/search?q=Afghanistan&hl=en&gl=AF&ceid=AF:en"},
+
+    # --- CENTRAL ASIA ---
+    {"lang": "KAZAKHSTAN", "flag": "🇰🇿", "name": "Kazakhstan News", "url": "https://news.google.com/rss/search?q=Kazakhstan&hl=en&gl=KZ&ceid=KZ:en"},
+    {"lang": "UZBEKISTAN", "flag": "🇺🇿", "name": "Uzbekistan News", "url": "https://news.google.com/rss/search?q=Uzbekistan&hl=en&gl=UZ&ceid=UZ:en"},
+    {"lang": "KYRGYZSTAN", "flag": "🇰🇬", "name": "Kyrgyzstan News", "url": "https://news.google.com/rss/search?q=Kyrgyzstan&hl=en&gl=KG&ceid=KG:en"},
+    {"lang": "TAJIKISTAN", "flag": "🇹🇯", "name": "Tajikistan News", "url": "https://news.google.com/rss/search?q=Tajikistan&hl=en&gl=TJ&ceid=TJ:en"},
+    {"lang": "TURKMENISTAN", "flag": "🇹🇲", "name": "Turkmenistan News", "url": "https://news.google.com/rss/search?q=Turkmenistan&hl=en&gl=TM&ceid=TM:en"},
+
+    # --- WEST ASIA / MIDDLE EAST ---
+    {"lang": "SAUDI", "flag": "🇸🇦", "name": "Saudi News", "url": "https://news.google.com/rss/search?q=Saudi+Arabia&hl=en&gl=SA&ceid=SA:en"},
+    {"lang": "UAE", "flag": "🇦🇪", "name": "UAE News", "url": "https://news.google.com/rss/search?q=UAE&hl=en&gl=AE&ceid=AE:en"},
+    {"lang": "QATAR", "flag": "🇶🇦", "name": "Qatar News", "url": "https://news.google.com/rss/search?q=Qatar&hl=en&gl=QA&ceid=QA:en"},
+    {"lang": "ISRAEL", "flag": "🇮🇱", "name": "Israel News", "url": "https://news.google.com/rss/search?q=Israel&hl=en&gl=IL&ceid=IL:en"},
+    {"lang": "IRAN", "flag": "🇮🇷", "name": "Iran News", "url": "https://news.google.com/rss/search?q=Iran&hl=en&gl=IR&ceid=IR:en"},
+    {"lang": "IRAQ", "flag": "🇮🇶", "name": "Iraq News", "url": "https://news.google.com/rss/search?q=Iraq&hl=en&gl=IQ&ceid=IQ:en"},
+    {"lang": "TURKEY", "flag": "🇹🇷", "name": "Turkey News", "url": "https://news.google.com/rss/search?q=Turkey&hl=en&gl=TR&ceid=TR:en"},
+    {"lang": "JORDAN", "flag": "🇯🇴", "name": "Jordan News", "url": "https://news.google.com/rss/search?q=Jordan&hl=en&gl=JO&ceid=JO:en"},
+    {"lang": "LEBANON", "flag": "🇱🇧", "name": "Lebanon News", "url": "https://news.google.com/rss/search?q=Lebanon&hl=en&gl=LB&ceid=LB:en"},
+    {"lang": "SYRIA", "flag": "🇸🇾", "name": "Syria News", "url": "https://news.google.com/rss/search?q=Syria&hl=en&gl=SY&ceid=SY:en"},
+    {"lang": "KUWAIT", "flag": "🇰🇼", "name": "Kuwait News", "url": "https://news.google.com/rss/search?q=Kuwait&hl=en&gl=KW&ceid=KW:en"},
+    {"lang": "BAHRAIN", "flag": "🇧🇭", "name": "Bahrain News", "url": "https://news.google.com/rss/search?q=Bahrain&hl=en&gl=BH&ceid=BH:en"},
+    {"lang": "OMAN", "flag": "🇴🇲", "name": "Oman News", "url": "https://news.google.com/rss/search?q=Oman&hl=en&gl=OM&ceid=OM:en"},
+    {"lang": "YEMEN", "flag": "🇾🇪", "name": "Yemen News", "url": "https://news.google.com/rss/search?q=Yemen&hl=en&gl=YE&ceid=YE:en"},
+    {"lang": "PALESTINE", "flag": "🇵🇸", "name": "Palestine News", "url": "https://news.google.com/rss/search?q=Palestine&hl=en&gl=PS&ceid=PS:en"},
+    {"lang": "CYPRUS", "flag": "🇨🇾", "name": "Cyprus News", "url": "https://news.google.com/rss/search?q=Cyprus&hl=en&gl=CY&ceid=CY:en"},
+    {"lang": "ARMENIA", "flag": "🇦🇲", "name": "Armenia News", "url": "https://news.google.com/rss/search?q=Armenia&hl=en&gl=AM&ceid=AM:en"},
+    {"lang": "GEORGIA", "flag": "🇬🇪", "name": "Georgia News", "url": "https://news.google.com/rss/search?q=Georgia&hl=en&gl=GE&ceid=GE:en"},
+    {"lang": "AZERBAIJAN", "flag": "🇦🇿", "name": "Azerbaijan News", "url": "https://news.google.com/rss/search?q=Azerbaijan&hl=en&gl=AZ&ceid=AZ:en"},
+
+    # --- OTHER ---
     {"lang": "UK", "flag": "🇬🇧", "name": "BBC UK", "url": "https://feeds.bbci.co.uk/news/uk/rss.xml"},
     {"lang": "USA", "flag": "🇺🇸", "name": "USA News", "url": "https://news.google.com/rss/search?q=USA&hl=en&gl=US&ceid=US:en"},
     {"lang": "UKRAINE", "flag": "🇺🇦", "name": "Ukraine News", "url": "https://news.google.com/rss/search?q=Ukraine&hl=en&gl=UA&ceid=UA:en"},
-    {"lang": "ISRAEL", "flag": "🇮🇱", "name": "Israel News", "url": "https://news.google.com/rss/search?q=Israel&hl=en&gl=IL&ceid=IL:en"},
-    {"lang": "IRAN", "flag": "🇮🇷", "name": "Iran News", "url": "https://news.google.com/rss/search?q=Iran&hl=en&gl=IR&ceid=IR:en"},
     {"lang": "BRAZIL", "flag": "🇧🇷", "name": "Brazil News", "url": "https://news.google.com/rss/search?q=Brazil&hl=en&gl=BR&ceid=BR:en"},
-    {"lang": "PAKISTAN", "flag": "🇵🇰", "name": "Pakistan News", "url": "https://news.google.com/rss/search?q=Pakistan&hl=en&gl=PK&ceid=PK:en"},
-    {"lang": "BANGLADESH", "flag": "🇧🇩", "name": "Bangladesh News", "url": "https://news.google.com/rss/search?q=Bangladesh&hl=en&gl=BD&ceid=BD:en"},
-    {"lang": "PHILIPPINES", "flag": "🇵🇭", "name": "Philippines News", "url": "https://news.google.com/rss/search?q=Philippines&hl=en&gl=PH&ceid=PH:en"},
-    {"lang": "INDONESIA", "flag": "🇮🇩", "name": "Indonesia News", "url": "https://news.google.com/rss/search?q=Indonesia&hl=en&gl=ID&ceid=ID:en"},
-    {"lang": "VIETNAM", "flag": "🇻🇳", "name": "Vietnam News", "url": "https://news.google.com/rss/search?q=Vietnam&hl=en&gl=VN&ceid=VN:en"},
 ]
 
 seen = set()
@@ -160,4 +225,4 @@ def main():
     app.run_polling()
 
 if __name__ == "__main__":
-    main()ං
+    main()
