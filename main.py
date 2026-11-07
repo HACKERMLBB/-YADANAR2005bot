@@ -161,12 +161,11 @@ FEEDS = [
     {"lang": "LIECHTENSTEIN", "flag": "🇱🇮", "name": "Liechtenstein News", "url": "https://news.google.com/rss/search?q=Liechtenstein&hl=en&gl=LI&ceid=LI:en"},
     {"lang": "KOSOVO", "flag": "🇽🇰", "name": "Kosovo News", "url": "https://news.google.com/rss/search?q=Kosovo&hl=en&gl=XK&ceid=XK:en"},
 
-    # --- AMERICAS - NORTH AMERICA ---
+    # --- AMERICAS - NORTH ---
     {"lang": "USA", "flag": "🇺🇸", "name": "USA News", "url": "https://news.google.com/rss/search?q=USA&hl=en&gl=US&ceid=US:en"},
     {"lang": "CANADA", "flag": "🇨🇦", "name": "Canada News", "url": "https://news.google.com/rss/search?q=Canada&hl=en&gl=CA&ceid=CA:en"},
     {"lang": "MEXICO", "flag": "🇲🇽", "name": "Mexico News", "url": "https://news.google.com/rss/search?q=Mexico&hl=en&gl=MX&ceid=MX:en"},
-
-    # --- AMERICAS - CENTRAL AMERICA ---
+    # --- AMERICAS - CENTRAL ---
     {"lang": "GUATEMALA", "flag": "🇬🇹", "name": "Guatemala News", "url": "https://news.google.com/rss/search?q=Guatemala&hl=en&gl=GT&ceid=GT:en"},
     {"lang": "BELIZE", "flag": "🇧🇿", "name": "Belize News", "url": "https://news.google.com/rss/search?q=Belize&hl=en&gl=BZ&ceid=BZ:en"},
     {"lang": "HONDURAS", "flag": "🇭🇳", "name": "Honduras News", "url": "https://news.google.com/rss/search?q=Honduras&hl=en&gl=HN&ceid=HN:en"},
@@ -174,7 +173,6 @@ FEEDS = [
     {"lang": "NICARAGUA", "flag": "🇳🇮", "name": "Nicaragua News", "url": "https://news.google.com/rss/search?q=Nicaragua&hl=en&gl=NI&ceid=NI:en"},
     {"lang": "COSTA RICA", "flag": "🇨🇷", "name": "Costa Rica News", "url": "https://news.google.com/rss/search?q=Costa+Rica&hl=en&gl=CR&ceid=CR:en"},
     {"lang": "PANAMA", "flag": "🇵🇦", "name": "Panama News", "url": "https://news.google.com/rss/search?q=Panama&hl=en&gl=PA&ceid=PA:en"},
-
     # --- AMERICAS - CARIBBEAN ---
     {"lang": "CUBA", "flag": "🇨🇺", "name": "Cuba News", "url": "https://news.google.com/rss/search?q=Cuba&hl=en&gl=CU&ceid=CU:en"},
     {"lang": "JAMAICA", "flag": "🇯🇲", "name": "Jamaica News", "url": "https://news.google.com/rss/search?q=Jamaica&hl=en&gl=JM&ceid=JM:en"},
@@ -189,8 +187,7 @@ FEEDS = [
     {"lang": "ANTIGUA", "flag": "🇦🇬", "name": "Antigua News", "url": "https://news.google.com/rss/search?q=Antigua&hl=en&gl=AG&ceid=AG:en"},
     {"lang": "DOMINICA", "flag": "🇩🇲", "name": "Dominica News", "url": "https://news.google.com/rss/search?q=Dominica&hl=en&gl=DM&ceid=DM:en"},
     {"lang": "SAINT KITTS", "flag": "🇰🇳", "name": "Saint Kitts News", "url": "https://news.google.com/rss/search?q=Saint+Kitts&hl=en&gl=KN&ceid=KN:en"},
-
-    # --- AMERICAS - SOUTH AMERICA ---
+    # --- AMERICAS - SOUTH ---
     {"lang": "BRAZIL", "flag": "🇧🇷", "name": "Brazil News", "url": "https://news.google.com/rss/search?q=Brazil&hl=en&gl=BR&ceid=BR:en"},
     {"lang": "ARGENTINA", "flag": "🇦🇷", "name": "Argentina News", "url": "https://news.google.com/rss/search?q=Argentina&hl=en&gl=AR&ceid=AR:en"},
     {"lang": "COLOMBIA", "flag": "🇨🇴", "name": "Colombia News", "url": "https://news.google.com/rss/search?q=Colombia&hl=en&gl=CO&ceid=CO:en"},
@@ -203,6 +200,84 @@ FEEDS = [
     {"lang": "URUGUAY", "flag": "🇺🇾", "name": "Uruguay News", "url": "https://news.google.com/rss/search?q=Uruguay&hl=en&gl=UY&ceid=UY:en"},
     {"lang": "GUYANA", "flag": "🇬🇾", "name": "Guyana News", "url": "https://news.google.com/rss/search?q=Guyana&hl=en&gl=GY&ceid=GY:en"},
     {"lang": "SURINAME", "flag": "🇸🇷", "name": "Suriname News", "url": "https://news.google.com/rss/search?q=Suriname&hl=en&gl=SR&ceid=SR:en"},
+
+    # --- AFRICA 54 - NORTH ---
+    {"lang": "EGYPT", "flag": "🇪🇬", "name": "Egypt News", "url": "https://news.google.com/rss/search?q=Egypt&hl=en&gl=EG&ceid=EG:en"},
+    {"lang": "ALGERIA", "flag": "🇩🇿", "name": "Algeria News", "url": "https://news.google.com/rss/search?q=Algeria&hl=en&gl=DZ&ceid=DZ:en"},
+    {"lang": "SUDAN", "flag": "🇸🇩", "name": "Sudan News", "url": "https://news.google.com/rss/search?q=Sudan&hl=en&gl=SD&ceid=SD:en"},
+    {"lang": "SOUTH SUDAN", "flag": "🇸🇸", "name": "South Sudan News", "url": "https://news.google.com/rss/search?q=South+Sudan&hl=en&gl=SS&ceid=SS:en"},
+    {"lang": "LIBYA", "flag": "🇱🇾", "name": "Libya News", "url": "https://news.google.com/rss/search?q=Libya&hl=en&gl=LY&ceid=LY:en"},
+    {"lang": "TUNISIA", "flag": "🇹🇳", "name": "Tunisia News", "url": "https://news.google.com/rss/search?q=Tunisia&hl=en&gl=TN&ceid=TN:en"},
+    {"lang": "MOROCCO", "flag": "🇲🇦", "name": "Morocco News", "url": "https://news.google.com/rss/search?q=Morocco&hl=en&gl=MA&ceid=MA:en"},
+    # --- AFRICA - WEST ---
+    {"lang": "NIGERIA", "flag": "🇳🇬", "name": "Nigeria News", "url": "https://news.google.com/rss/search?q=Nigeria&hl=en&gl=NG&ceid=NG:en"},
+    {"lang": "GHANA", "flag": "🇬🇭", "name": "Ghana News", "url": "https://news.google.com/rss/search?q=Ghana&hl=en&gl=GH&ceid=GH:en"},
+    {"lang": "SENEGAL", "flag": "🇸🇳", "name": "Senegal News", "url": "https://news.google.com/rss/search?q=Senegal&hl=en&gl=SN&ceid=SN:en"},
+    {"lang": "MALI", "flag": "🇲🇱", "name": "Mali News", "url": "https://news.google.com/rss/search?q=Mali&hl=en&gl=ML&ceid=ML:en"},
+    {"lang": "NIGER", "flag": "🇳🇪", "name": "Niger News", "url": "https://news.google.com/rss/search?q=Niger&hl=en&gl=NE&ceid=NE:en"},
+    {"lang": "CHAD", "flag": "🇹🇩", "name": "Chad News", "url": "https://news.google.com/rss/search?q=Chad&hl=en&gl=TD&ceid=TD:en"},
+    {"lang": "MAURITANIA", "flag": "🇲🇷", "name": "Mauritania News", "url": "https://news.google.com/rss/search?q=Mauritania&hl=en&gl=MR&ceid=MR:en"},
+    {"lang": "GAMBIA", "flag": "🇬🇲", "name": "Gambia News", "url": "https://news.google.com/rss/search?q=Gambia&hl=en&gl=GM&ceid=GM:en"},
+    {"lang": "GUINEA-BISSAU", "flag": "🇬🇼", "name": "Guinea-Bissau News", "url": "https://news.google.com/rss/search?q=Guinea+Bissau&hl=en&gl=GW&ceid=GW:en"},
+    {"lang": "GUINEA", "flag": "🇬🇳", "name": "Guinea News", "url": "https://news.google.com/rss/search?q=Guinea&hl=en&gl=GN&ceid=GN:en"},
+    {"lang": "SIERRA LEONE", "flag": "🇸🇱", "name": "Sierra Leone News", "url": "https://news.google.com/rss/search?q=Sierra+Leone&hl=en&gl=SL&ceid=SL:en"},
+    {"lang": "LIBERIA", "flag": "🇱🇷", "name": "Liberia News", "url": "https://news.google.com/rss/search?q=Liberia&hl=en&gl=LR&ceid=LR:en"},
+    {"lang": "IVORY COAST", "flag": "🇨🇮", "name": "Ivory Coast News", "url": "https://news.google.com/rss/search?q=Ivory+Coast&hl=en&gl=CI&ceid=CI:en"},
+    {"lang": "TOGO", "flag": "🇹🇬", "name": "Togo News", "url": "https://news.google.com/rss/search?q=Togo&hl=en&gl=TG&ceid=TG:en"},
+    {"lang": "BENIN", "flag": "🇧🇯", "name": "Benin News", "url": "https://news.google.com/rss/search?q=Benin&hl=en&gl=BJ&ceid=BJ:en"},
+    {"lang": "BURKINA FASO", "flag": "🇧🇫", "name": "Burkina Faso News", "url": "https://news.google.com/rss/search?q=Burkina+Faso&hl=en&gl=BF&ceid=BF:en"},
+    {"lang": "CAPE VERDE", "flag": "🇨🇻", "name": "Cape Verde News", "url": "https://news.google.com/rss/search?q=Cape+Verde&hl=en&gl=CV&ceid=CV:en"},
+    {"lang": "SAO TOME", "flag": "🇸🇹", "name": "Sao Tome News", "url": "https://news.google.com/rss/search?q=Sao+Tome&hl=en&gl=ST&ceid=ST:en"},
+    # --- AFRICA - EAST ---
+    {"lang": "ETHIOPIA", "flag": "🇪🇹", "name": "Ethiopia News", "url": "https://news.google.com/rss/search?q=Ethiopia&hl=en&gl=ET&ceid=ET:en"},
+    {"lang": "ERITREA", "flag": "🇪🇷", "name": "Eritrea News", "url": "https://news.google.com/rss/search?q=Eritrea&hl=en&gl=ER&ceid=ER:en"},
+    {"lang": "DJIBOUTI", "flag": "🇩🇯", "name": "Djibouti News", "url": "https://news.google.com/rss/search?q=Djibouti&hl=en&gl=DJ&ceid=DJ:en"},
+    {"lang": "SOMALIA", "flag": "🇸🇴", "name": "Somalia News", "url": "https://news.google.com/rss/search?q=Somalia&hl=en&gl=SO&ceid=SO:en"},
+    {"lang": "KENYA", "flag": "🇰🇪", "name": "Kenya News", "url": "https://news.google.com/rss/search?q=Kenya&hl=en&gl=KE&ceid=KE:en"},
+    {"lang": "UGANDA", "flag": "🇺🇬", "name": "Uganda News", "url": "https://news.google.com/rss/search?q=Uganda&hl=en&gl=UG&ceid=UG:en"},
+    {"lang": "TANZANIA", "flag": "🇹🇿", "name": "Tanzania News", "url": "https://news.google.com/rss/search?q=Tanzania&hl=en&gl=TZ&ceid=TZ:en"},
+    {"lang": "RWANDA", "flag": "🇷🇼", "name": "Rwanda News", "url": "https://news.google.com/rss/search?q=Rwanda&hl=en&gl=RW&ceid=RW:en"},
+    {"lang": "BURUNDI", "flag": "🇧🇮", "name": "Burundi News", "url": "https://news.google.com/rss/search?q=Burundi&hl=en&gl=BI&ceid=BI:en"},
+    # --- AFRICA - CENTRAL ---
+    {"lang": "DR CONGO", "flag": "🇨🇩", "name": "DR Congo News", "url": "https://news.google.com/rss/search?q=DR+Congo&hl=en&gl=CD&ceid=CD:en"},
+    {"lang": "CONGO", "flag": "🇨🇬", "name": "Congo News", "url": "https://news.google.com/rss/search?q=Congo&hl=en&gl=CG&ceid=CG:en"},
+    {"lang": "GABON", "flag": "🇬🇦", "name": "Gabon News", "url": "https://news.google.com/rss/search?q=Gabon&hl=en&gl=GA&ceid=GA:en"},
+    {"lang": "EQUATORIAL GUINEA", "flag": "🇬🇶", "name": "Equatorial Guinea News", "url": "https://news.google.com/rss/search?q=Equatorial+Guinea&hl=en&gl=GQ&ceid=GQ:en"},
+    {"lang": "CAMEROON", "flag": "🇨🇲", "name": "Cameroon News", "url": "https://news.google.com/rss/search?q=Cameroon&hl=en&gl=CM&ceid=CM:en"},
+    {"lang": "CENTRAL AFRICAN", "flag": "🇨🇫", "name": "Central African News", "url": "https://news.google.com/rss/search?q=Central+African+Republic&hl=en&gl=CF&ceid=CF:en"},
+    # --- AFRICA - SOUTH ---
+    {"lang": "ANGOLA", "flag": "🇦🇴", "name": "Angola News", "url": "https://news.google.com/rss/search?q=Angola&hl=en&gl=AO&ceid=AO:en"},
+    {"lang": "ZAMBIA", "flag": "🇿🇲", "name": "Zambia News", "url": "https://news.google.com/rss/search?q=Zambia&hl=en&gl=ZM&ceid=ZM:en"},
+    {"lang": "ZIMBABWE", "flag": "🇿🇼", "name": "Zimbabwe News", "url": "https://news.google.com/rss/search?q=Zimbabwe&hl=en&gl=ZW&ceid=ZW:en"},
+    {"lang": "BOTSWANA", "flag": "🇧🇼", "name": "Botswana News", "url": "https://news.google.com/rss/search?q=Botswana&hl=en&gl=BW&ceid=BW:en"},
+    {"lang": "NAMIBIA", "flag": "🇳🇦", "name": "Namibia News", "url": "https://news.google.com/rss/search?q=Namibia&hl=en&gl=NA&ceid=NA:en"},
+    {"lang": "SOUTH AFRICA", "flag": "🇿🇦", "name": "South Africa News", "url": "https://news.google.com/rss/search?q=South+Africa&hl=en&gl=ZA&ceid=ZA:en"},
+    {"lang": "LESOTHO", "flag": "🇱🇸", "name": "Lesotho News", "url": "https://news.google.com/rss/search?q=Lesotho&hl=en&gl=LS&ceid=LS:en"},
+    {"lang": "ESWATINI", "flag": "🇸🇿", "name": "Eswatini News", "url": "https://news.google.com/rss/search?q=Eswatini&hl=en&gl=SZ&ceid=SZ:en"},
+    {"lang": "MOZAMBIQUE", "flag": "🇲🇿", "name": "Mozambique News", "url": "https://news.google.com/rss/search?q=Mozambique&hl=en&gl=MZ&ceid=MZ:en"},
+    {"lang": "MALAWI", "flag": "🇲🇼", "name": "Malawi News", "url": "https://news.google.com/rss/search?q=Malawi&hl=en&gl=MW&ceid=MW:en"},
+    {"lang": "MADAGASCAR", "flag": "🇲🇬", "name": "Madagascar News", "url": "https://news.google.com/rss/search?q=Madagascar&hl=en&gl=MG&ceid=MG:en"},
+    {"lang": "MAURITIUS", "flag": "🇲🇺", "name": "Mauritius News", "url": "https://news.google.com/rss/search?q=Mauritius&hl=en&gl=MU&ceid=MU:en"},
+    {"lang": "SEYCHELLES", "flag": "🇸🇨", "name": "Seychelles News", "url": "https://news.google.com/rss/search?q=Seychelles&hl=en&gl=SC&ceid=SC:en"},
+    {"lang": "COMOROS", "flag": "🇰🇲", "name": "Comoros News", "url": "https://news.google.com/rss/search?q=Comoros&hl=en&gl=KM&ceid=KM:en"},
+
+    # --- OCEANIA 16 ---
+    {"lang": "AUSTRALIA", "flag": "🇦🇺", "name": "Australia News", "url": "https://news.google.com/rss/search?q=Australia&hl=en&gl=AU&ceid=AU:en"},
+    {"lang": "NEW ZEALAND", "flag": "🇳🇿", "name": "New Zealand News", "url": "https://news.google.com/rss/search?q=New+Zealand&hl=en&gl=NZ&ceid=NZ:en"},
+    {"lang": "FIJI", "flag": "🇫🇯", "name": "Fiji News", "url": "https://news.google.com/rss/search?q=Fiji&hl=en&gl=FJ&ceid=FJ:en"},
+    {"lang": "PAPUA NEW GUINEA", "flag": "🇵🇬", "name": "Papua New Guinea News", "url": "https://news.google.com/rss/search?q=Papua+New+Guinea&hl=en&gl=PG&ceid=PG:en"},
+    {"lang": "SOLOMON", "flag": "🇸🇧", "name": "Solomon Islands News", "url": "https://news.google.com/rss/search?q=Solomon+Islands&hl=en&gl=SB&ceid=SB:en"},
+    {"lang": "VANUATU", "flag": "🇻🇺", "name": "Vanuatu News", "url": "https://news.google.com/rss/search?q=Vanuatu&hl=en&gl=VU&ceid=VU:en"},
+    {"lang": "SAMOA", "flag": "🇼🇸", "name": "Samoa News", "url": "https://news.google.com/rss/search?q=Samoa&hl=en&gl=WS&ceid=WS:en"},
+    {"lang": "TONGA", "flag": "🇹🇴", "name": "Tonga News", "url": "https://news.google.com/rss/search?q=Tonga&hl=en&gl=TO&ceid=TO:en"},
+    {"lang": "TUVALU", "flag": "🇹🇻", "name": "Tuvalu News", "url": "https://news.google.com/rss/search?q=Tuvalu&hl=en&gl=TV&ceid=TV:en"},
+    {"lang": "KIRIBATI", "flag": "🇰🇮", "name": "Kiribati News", "url": "https://news.google.com/rss/search?q=Kiribati&hl=en&gl=KI&ceid=KI:en"},
+    {"lang": "NAURU", "flag": "🇳🇷", "name": "Nauru News", "url": "https://news.google.com/rss/search?q=Nauru&hl=en&gl=NR&ceid=NR:en"},
+    {"lang": "PALAU", "flag": "🇵🇼", "name": "Palau News", "url": "https://news.google.com/rss/search?q=Palau&hl=en&gl=PW&ceid=PW:en"},
+    {"lang": "MARSHALL", "flag": "🇲🇭", "name": "Marshall Islands News", "url": "https://news.google.com/rss/search?q=Marshall+Islands&hl=en&gl=MH&ceid=MH:en"},
+    {"lang": "MICRONESIA", "flag": "🇫🇲", "name": "Micronesia News", "url": "https://news.google.com/rss/search?q=Micronesia&hl=en&gl=FM&ceid=FM:en"},
+    {"lang": "COOK ISLANDS", "flag": "🇨🇰", "name": "Cook Islands News", "url": "https://news.google.com/rss/search?q=Cook+Islands&hl=en&gl=CK&ceid=CK:en"},
+    {"lang": "NIUE", "flag": "🇳🇺", "name": "Niue News", "url": "https://news.google.com/rss/search?q=Niue&hl=en&gl=NU&ceid=NU:en"},
 
     # --- TERRITORIES / SPECIAL REGIONS ---
     {"lang": "TIBET", "flag": "🏔️", "name": "Tibet News", "url": "https://news.google.com/rss/search?q=Tibet&hl=en&gl=CN&ceid=CN:en"},
@@ -241,6 +316,12 @@ FEEDS = [
     {"lang": "SAINT BARTHELEMY", "flag": "🇧🇱", "name": "Saint Barthelemy News", "url": "https://news.google.com/rss/search?q=Saint+Barthelemy&hl=en&gl=BL&ceid=BL:en"},
     {"lang": "GUADELOUPE", "flag": "🇬🇵", "name": "Guadeloupe News", "url": "https://news.google.com/rss/search?q=Guadeloupe&hl=en&gl=GP&ceid=GP:en"},
     {"lang": "MARTINIQUE", "flag": "🇲🇶", "name": "Martinique News", "url": "https://news.google.com/rss/search?q=Martinique&hl=en&gl=MQ&ceid=MQ:en"},
+    {"lang": "GUAM", "flag": "🇬🇺", "name": "Guam News", "url": "https://news.google.com/rss/search?q=Guam&hl=en&gl=GU&ceid=GU:en"},
+    {"lang": "AMERICAN SAMOA", "flag": "🇦🇸", "name": "American Samoa News", "url": "https://news.google.com/rss/search?q=American+Samoa&hl=en&gl=AS&ceid=AS:en"},
+    {"lang": "FRENCH POLYNESIA", "flag": "🇵🇫", "name": "French Polynesia News", "url": "https://news.google.com/rss/search?q=French+Polynesia&hl=en&gl=PF&ceid=PF:en"},
+    {"lang": "NEW CALEDONIA", "flag": "🇳🇨", "name": "New Caledonia News", "url": "https://news.google.com/rss/search?q=New+Caledonia&hl=en&gl=NC&ceid=NC:en"},
+    {"lang": "WESTERN SAHARA", "flag": "🏴", "name": "Western Sahara News", "url": "https://news.google.com/rss/search?q=Western+Sahara&hl=en&gl=EH&ceid=EH:en"},
+    {"lang": "REUNION", "flag": "🇷🇪", "name": "Reunion News", "url": "https://news.google.com/rss/search?q=Reunion&hl=en&gl=RE&ceid=RE:en"},
 ]
 
 seen = set()
