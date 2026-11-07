@@ -1,4 +1,4 @@
-import os
+ import os
 import asyncio
 import feedparser
 import hashlib
@@ -473,6 +473,27 @@ FEEDS = [
     {"lang": "SAN MARINO", "flag": "🇸🇲", "name": "San Marino News", "url": "https://www.sanmarinortv.sm/feed"},
     {"lang": "VATICAN", "flag": "🇻🇦", "name": "Vatican News", "url": "https://www.vaticannews.va/en/rss.xml"},
     {"lang": "LIECHTENSTEIN", "flag": "🇱🇮", "name": "Liechtenstein News", "url": "https://www.liechtenstein.li/feed"},
+
+    # --- MALDIVES + ASIA 100% COMPLETE - අලුතින් Add කරපු ටික ---
+    {"lang": "MALDIVES", "flag": "🇲🇻", "name": "Raajje Maldives", "url": "https://raajje.mv/feed"},
+    {"lang": "MALDIVES", "flag": "🇲🇻", "name": "Sun Online Maldives", "url": "https://en.sun.mv/feed"},
+    {"lang": "MALDIVES", "flag": "🇲🇻", "name": "Avas Maldives", "url": "https://avas.mv/feed"},
+    {"lang": "MALDIVES", "flag": "🇲🇻", "name": "Mihaaru Maldives", "url": "https://mihaaru.com/feed"},
+    {"lang": "MALDIVES", "flag": "🇲🇻", "name": "PSM News Maldives", "url": "https://psmnews.mv/feed"},
+    {"lang": "MALDIVES", "flag": "🇲🇻", "name": "Maldives Times", "url": "https://www.maldivestimes.com/feed/"},
+    {"lang": "MALDIVES", "flag": "🇲🇻", "name": "The Edition Maldives", "url": "https://edition.mv/feed"},
+    {"lang": "SRI LANKA", "flag": "🇱🇰", "name": "Ada Derana English", "url": "https://www.adaderana.lk/rss.php"},
+    {"lang": "SRI LANKA", "flag": "🇱🇰", "name": "NewsFirst English", "url": "https://english.newsfirst.lk/feed"},
+    {"lang": "SRI LANKA", "flag": "🇱🇰", "name": "Hiru English", "url": "https://www.hirunews.lk/rss/english.xml"},
+    {"lang": "ASIA", "flag": "🌏", "name": "CNA Asia", "url": "https://www.channelnewsasia.com/rssfeeds/8395884"},
+    {"lang": "ASIA", "flag": "🌏", "name": "Nikkei Asia", "url": "https://asia.nikkei.com/rss/feed/nar"},
+    {"lang": "ASIA", "flag": "🌏", "name": "SCMP Asia", "url": "https://www.scmp.com/rss/4/feed"},
+    {"lang": "ASIA", "flag": "🌏", "name": "Al Jazeera Asia", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
+
+    # --- KOSOVO - EUROPE 100% කරන්න අලුතින් Add කරපු ටික - කලින් ඒවාට අත තිබ්බේ නෑ ---
+    {"lang": "KOSOVO", "flag": "🇽🇰", "name": "Prishtina Insight Kosovo", "url": "https://prishtinainsight.com/feed/"},
+    {"lang": "KOSOVO", "flag": "🇽🇰", "name": "Kosovo News", "url": "https://www.kosovo-news.com/feed/"},
+    {"lang": "KOSOVO", "flag": "🇽🇰", "name": "Koha Ditore Kosovo", "url": "https://www.koha.net/feed/"},
 ]
 
 seen = set()
