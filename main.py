@@ -63,12 +63,19 @@ def make_text(f, title, link):
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "🌍 News Bot Running!\n\n👉 /news Sri Lanka\n👉 /news Myanmar\n👉 /news India\n👉 /countries - All Countries\n👉 /latest - Latest News"
+        "Welcome to ŸᗅĐᗅŇᗅᏒ💗 news bot\n\n"
+        "🌍 News Bot Running!\n\n"
+        "👉 /news Myanmar\n"
+        "👉 /news India\n"
+        "👉 /countries - All Countries\n"
+        "👉 /latest - Latest News\n\n"
+        "⚡ Update channel every 3 minutes\n"
+        "🔥 Powered by t.me/bigolive_asia"
     )
 
 async def news_country(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not context.args:
-        await update.message.reply_text("✍️ Ex: /news Sri Lanka\n/news Myanmar\n/news India")
+        await update.message.reply_text("✍️ Ex: /news Myanmar\n/news India")
         return
     query = " ".join(context.args).strip().upper()
     if "LANKA" in query or "SINHALA" in query:
@@ -140,7 +147,6 @@ async def post_init(app):
     asyncio.create_task(auto_loop(app.bot))
 
 def main():
-    # --- main එක ඇතුලෙත් Loop එක හදනවා, 100% Crash වෙන්නේ නෑ ---
     try:
         asyncio.get_event_loop()
     except RuntimeError:
@@ -154,4 +160,4 @@ def main():
     app.run_polling()
 
 if __name__ == "__main__":
-    main()
+    main()ං
