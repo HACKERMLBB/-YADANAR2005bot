@@ -31,7 +31,7 @@ BOT_USERNAME = os.environ.get("BOT_USERNAME", "YADANAR2005bot")
 # --- මේ Function එක විතරයි හැදුවේ, අනිත් ඔක්කොම ඔයා එවපු විදිහටමයි ---
 def get_country_button():
     url = f"https://t.me/{BOT_USERNAME}?start=countries"
-    return InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton("🔍 Find Your Country News", url=url)]])
+    return InlineKeyboardMarkup(inline_keyboard=InlineKeyboardButton("🔍 Find Your Country News", url=url))
 
 FEEDS = [
     {"lang": "ENGLISH", "flag": "🇬🇧", "name": "BBC", "url": "https://feeds.bbci.co.uk/news/world/rss.xml"},
@@ -540,6 +540,12 @@ async def region_southamerica(update: Update, context: ContextTypes.DEFAULT_TYPE
     await send_filtered(update, matched[:25], "🌎 South America 100% - Latest News...")
 
 # --- මේක විතරයි හදලා තියෙන්නේ - Channel එකට Button නැතුව, කලින් වගේම ---
+async def send_to_one(bot, ch, text):
+    try:
+        await bot.send_message(chat_id=ch, text=text, parse_mode=ParseMode.HTML, disable_web_page_preview=False)
+    except Exception as e:
+        print(f"Send fail {ch}: {e}")
+
 async def check_news(bot):
     for feed_info in FEEDS:
         try:
@@ -552,11 +558,8 @@ async def check_news(bot):
                 seen.add(h)
                 title = entry.get("title", "No Title")
                 text = make_text(feed_info, title, link)
-                for ch in CHANNEL_IDS:
-                    try:
-                        await bot.send_message(chat_id=ch, text=text, parse_mode=ParseMode.HTML, disable_web_page_preview=False)
-                    except Exception as e:
-                        print(f"Send fail {ch}: {e}")
+                # පරණ එකේ එකින් එක යවන එක අයින් කරලා, දැන් ඔක්කොම Channel වලට එකම වෙලාවේ යවනවා
+                await asyncio.gather(*[send_to_one(bot, ch, text) for ch in CHANNEL_IDS])
                 await asyncio.sleep(1)
         except Exception as e:
             print(f"Feed fail {feed_info['name']}: {e}")
