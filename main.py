@@ -48,7 +48,7 @@ FEEDS = [
     {"lang": "WORLD", "flag": "🌍", "name": "WION", "url": "https://www.wionews.com/rss/world.xml"},
     {"lang": "WORLD", "flag": "🌍", "name": "ABC Australia", "url": "https://www.abc.net.au/news/feed/51120/rss.xml"},
 
-    # --- SRI LANKA / SINHALA ---
+    # --- SRI LANKA ---
     {"lang": "SRI LANKA", "flag": "🇱🇰", "name": "Sri Lanka", "url": "https://news.google.com/rss/search?q=Sri+Lanka&hl=en&gl=LK&ceid=LK:en"},
     {"lang": "SINHALA", "flag": "🇱🇰", "name": "BBC Sinhala", "url": "https://feeds.bbci.co.uk/sinhala/rss.xml"},
     {"lang": "SINHALA", "flag": "🇱🇰", "name": "Lanka Sinhala", "url": "https://news.google.com/rss/search?q=Sri+Lanka&hl=si&gl=LK&ceid=LK:si"},
@@ -160,6 +160,26 @@ FEEDS = [
     {"lang": "VATICAN", "flag": "🇻🇦", "name": "Vatican News", "url": "https://news.google.com/rss/search?q=Vatican&hl=en&gl=VA&ceid=VA:en"},
     {"lang": "LIECHTENSTEIN", "flag": "🇱🇮", "name": "Liechtenstein News", "url": "https://news.google.com/rss/search?q=Liechtenstein&hl=en&gl=LI&ceid=LI:en"},
     {"lang": "KOSOVO", "flag": "🇽🇰", "name": "Kosovo News", "url": "https://news.google.com/rss/search?q=Kosovo&hl=en&gl=XK&ceid=XK:en"},
+
+    # --- TERRITORIES / SPECIAL REGIONS ---
+    {"lang": "TIBET", "flag": "🏔️", "name": "Tibet News", "url": "https://news.google.com/rss/search?q=Tibet&hl=en&gl=CN&ceid=CN:en"},
+    {"lang": "HONG KONG", "flag": "🇭🇰", "name": "Hong Kong News", "url": "https://news.google.com/rss/search?q=Hong+Kong&hl=en&gl=HK&ceid=HK:en"},
+    {"lang": "MACAU", "flag": "🇲🇴", "name": "Macau News", "url": "https://news.google.com/rss/search?q=Macau&hl=en&gl=MO&ceid=MO:en"},
+    {"lang": "KASHMIR", "flag": "🏔️", "name": "Kashmir News", "url": "https://news.google.com/rss/search?q=Kashmir&hl=en&gl=IN&ceid=IN:en"},
+    {"lang": "KURDISTAN", "flag": "☀️", "name": "Kurdistan News", "url": "https://news.google.com/rss/search?q=Kurdistan&hl=en&gl=IQ&ceid=IQ:en"},
+    {"lang": "SCOTLAND", "flag": "🏴󐁧󐁢󐁳󐁣󐁴󐁿", "name": "Scotland News", "url": "https://news.google.com/rss/search?q=Scotland&hl=en&gl=GB&ceid=GB:en"},
+    {"lang": "WALES", "flag": "🏴󐁧󐁢󐁷󐁬󐁳󐁿", "name": "Wales News", "url": "https://news.google.com/rss/search?q=Wales&hl=en&gl=GB&ceid=GB:en"},
+    {"lang": "NORTHERN IRELAND", "flag": "🇬🇧", "name": "Northern Ireland News", "url": "https://news.google.com/rss/search?q=Northern+Ireland&hl=en&gl=GB&ceid=GB:en"},
+    {"lang": "GIBRALTAR", "flag": "🇬🇮", "name": "Gibraltar News", "url": "https://news.google.com/rss/search?q=Gibraltar&hl=en&gl=GI&ceid=GI:en"},
+    {"lang": "CATALONIA", "flag": "🏴", "name": "Catalonia News", "url": "https://news.google.com/rss/search?q=Catalonia&hl=en&gl=ES&ceid=ES:en"},
+    {"lang": "BASQUE", "flag": "🏴", "name": "Basque News", "url": "https://news.google.com/rss/search?q=Basque&hl=en&gl=ES&ceid=ES:en"},
+    {"lang": "CORSICA", "flag": "🇫🇷", "name": "Corsica News", "url": "https://news.google.com/rss/search?q=Corsica&hl=en&gl=FR&ceid=FR:en"},
+    {"lang": "GREENLAND", "flag": "🇬🇱", "name": "Greenland News", "url": "https://news.google.com/rss/search?q=Greenland&hl=en&gl=GL&ceid=GL:en"},
+    {"lang": "FAROE", "flag": "🇫🇴", "name": "Faroe Islands News", "url": "https://news.google.com/rss/search?q=Faroe+Islands&hl=en&gl=FO&ceid=FO:en"},
+    {"lang": "CRIMEA", "flag": "🏴", "name": "Crimea News", "url": "https://news.google.com/rss/search?q=Crimea&hl=en&gl=UA&ceid=UA:en"},
+    {"lang": "TRANSNISTRIA", "flag": "🏴", "name": "Transnistria News", "url": "https://news.google.com/rss/search?q=Transnistria&hl=en&gl=MD&ceid=MD:en"},
+    {"lang": "SICILY", "flag": "🇮🇹", "name": "Sicily News", "url": "https://news.google.com/rss/search?q=Sicily&hl=en&gl=IT&ceid=IT:en"},
+    {"lang": "SARDINIA", "flag": "🇮🇹", "name": "Sardinia News", "url": "https://news.google.com/rss/search?q=Sardinia&hl=en&gl=IT&ceid=IT:en"},
 
     # --- OTHER ---
     {"lang": "USA", "flag": "🇺🇸", "name": "USA News", "url": "https://news.google.com/rss/search?q=USA&hl=en&gl=US&ceid=US:en"},
