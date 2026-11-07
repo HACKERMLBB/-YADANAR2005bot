@@ -4,7 +4,7 @@ import feedparser
 import hashlib
 from flask import Flask
 import threading
-from telegram import Update
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, ContextTypes
 from telegram.constants import ParseMode
 
@@ -30,6 +30,14 @@ threading.Thread(target=run_flask, daemon=True).start()
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 CHANNEL_IDS = os.environ.get("CHANNEL_IDS", os.environ.get("CHANNEL_ID", "")).split(",")
 CHANNEL_IDS = [c.strip() for c in CHANNEL_IDS if c.strip()]
+
+# --- BOT USERNAME - ඔයා කිව්ව විදිහට අතින් දැම්මා, අනිත් ඒවාට අත තිබ්බේ නෑ ---
+BOT_USERNAME = os.environ.get("BOT_USERNAME", "YADANAR2005bot")
+
+def get_country_button():
+    url = f"https://t.me/{BOT_USERNAME}?start=countries"
+    keyboard = InlineKeyboardButton("🔍 Find Your Country News", url=url)
+    return InlineKeyboardMarkup(keyboard)
 
 FEEDS = [
     # --- ENGLISH WORLD ---
@@ -502,8 +510,12 @@ def make_text(feed_info, title, link):
     return f"{feed_info['flag']} <b>[{feed_info['lang']} - {feed_info['name']}]</b>\n\n{title}\n\n🔗 <a href='{link}'>Read Full News</a>\n\n⚡ Powered by <a href='https://t.me/bigolive_asia'>@bigolive_asia</a>"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    # Button එක Click කරපු අයට රටවල් ටික Autoම පෙන්නනවා
+    if context.args and context.args[0] == "countries":
+        await countries_list(update, context)
+        return
     await update.message.reply_text(
-        "🌍 Bot is running! News every 5 min.\n\nAll Regions: \n\n⚡ Powered by https://t.me/bigolive_asia"
+        "🌍 Bot is running! News every 5 min.\n\nAll Regions:\n🌏 Asia 100%\n🇪🇺 Europe 100%\n🌎 South America 100%\n\n👉 Your Country News: /news Sri Lanka\n👉 All Countries: /countries\n👉 /asia | /europe | /southamerica\n\n⚡ Powered by https://t.me/bigolive_asia"
     )
 
 async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -516,10 +528,86 @@ async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE):
             link = entry.get("link", "")
             title = entry.get("title", "No Title")
             text = make_text(feed_info, title, link)
-            await update.message.reply_text(text, parse_mode=ParseMode.HTML, disable_web_page_preview=False)
+            await update.message.reply_text(text, parse_mode=ParseMode.HTML, disable_web_page_preview=False, reply_markup=get_country_button())
             await asyncio.sleep(1)
         except Exception as e:
             print(f"Latest fail {feed_info['name']}: {e}")
+
+# --- NEW: රටේ News ඉක්මනට හොයාගන්න - කලින් ඒවාට අත තිබ්බේ නෑ ---
+async def send_filtered(update, feeds_to_send, title_text):
+    await update.message.reply_text(title_text)
+    count = 0
+    for feed_info in feeds_to_send:
+        try:
+            feed = feedparser.parse(feed_info["url"])
+            if not feed.entries: continue
+            entry = feed.entries[0]
+            link = entry.get("link", "")
+            title = entry.get("title", "No Title")
+            text = make_text(feed_info, title, link)
+            await update.message.reply_text(text, parse_mode=ParseMode.HTML, disable_web_page_preview=False, reply_markup=get_country_button())
+            count += 1
+            await asyncio.sleep(0.7)
+            if count >= 10:
+                break
+        except Exception as e:
+            print(f"Filtered fail {feed_info['name']}: {e}")
+    if count == 0:
+        await update.message.reply_text("😔 News not found now. Try again later.")
+
+async def news_country(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    if not context.args:
+        await update.message.reply_text("✍️ Type like this:\n/news Sri Lanka\n/news India\n/news Thailand\n/news Brazil\n\nSee all: /countries")
+        return
+    query = " ".join(context.args).strip().upper()
+    # Sri Lanka වගේ අය SINHALA + SRI LANKA දෙකම එන්න ඕන
+    if "SRI LANKA" in query or "LANKA" in query or "SINHALA" in query:
+        query = "SRI LANKA"
+    if "USA" in query or "AMERICA" in query:
+        query = "ENGLISH"
+    matched = []
+    for f in FEEDS:
+        lang_up = f["lang"].upper()
+        name_up = f["name"].upper()
+        if query == lang_up or query in name_up or query in lang_up:
+            matched.append(f)
+    if query == "SRI LANKA":
+        for f in FEEDS:
+            if f["lang"] == "SINHALA" and f not in matched:
+                matched.append(f)
+    if not matched:
+        await update.message.reply_text(f"❌ '{' '.join(context.args)}' not found.\nSee all: /countries")
+        return
+    await send_filtered(update, matched, f"📰 {query} - Latest News...")
+
+async def countries_list(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    langs = []
+    seen_lang = set()
+    for f in FEEDS:
+        if f["lang"] not in seen_lang:
+            seen_lang.add(f["lang"])
+            langs.append(f"{f['flag']} {f['lang']}")
+    text = "🌍 All Countries:\n\n" + "\n".join(sorted(langs)) + "\n\n✍️ Use: /news Country Name\nExample: /news Japan"
+    if len(text) > 4000:
+        await update.message.reply_text(text[:4000])
+        await update.message.reply_text(text[4000:])
+    else:
+        await update.message.reply_text(text)
+
+async def region_asia(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    asia_langs = ["INDIA","SINHALA","SRI LANKA","MYANMAR","PHILIPPINES","INDONESIA","CHINA","VIETNAM","CAMBODIA","MALAYSIA","BHUTAN","NEPAL","LAOS","SINGAPORE","BRUNEI","TIMOR-LESTE","NORTH KOREA","TIBET","JAPAN","KOREA","TAIWAN","HONG KONG","MONGOLIA","PAKISTAN","BANGLADESH","AFGHANISTAN","KAZAKHSTAN","UZBEKISTAN","KYRGYZSTAN","TAJIKISTAN","TURKMENISTAN","AZERBAIJAN","ARMENIA","GEORGIA","CYPRUS","MALDIVES","ASIA","THAILAND","SAUDI","UAE","QATAR","ISRAEL","IRAN","IRAQ","JORDAN","LEBANON","SYRIA","KUWAIT","BAHRAIN","OMAN","YEMEN","PALESTINE","WEST ASIA"]
+    matched = [f for f in FEEDS if f["lang"] in asia_langs]
+    await send_filtered(update, matched[:25], "🌏 Asia 100% - Latest News...")
+
+async def region_europe(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    europe_langs = ["UK","FRANCE","GERMANY","ITALY","SPAIN","NETHERLANDS","POLAND","UKRAINE","TURKEY","EUROPE","PORTUGAL","BELGIUM","SWITZERLAND","AUSTRIA","SWEDEN","NORWAY","DENMARK","FINLAND","GREECE","IRELAND","CZECH","HUNGARY","ROMANIA","BULGARIA","CROATIA","SERBIA","BELARUS","SLOVENIA","SLOVAKIA","LITHUANIA","LATVIA","ESTONIA","ICELAND","LUXEMBOURG","MALTA","ALBANIA","BOSNIA","MONTENEGRO","NORTH MACEDONIA","MOLDOVA","RUSSIA","ANDORRA","MONACO","SAN MARINO","VATICAN","LIECHTENSTEIN","KOSOVO","CYPRUS"]
+    matched = [f for f in FEEDS if f["lang"] in europe_langs]
+    await send_filtered(update, matched[:25], "🇪🇺 Europe 100% - Latest News...")
+
+async def region_southamerica(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    sa_langs = ["BRAZIL","ARGENTINA","COLOMBIA","CHILE","PERU","VENEZUELA","ECUADOR","BOLIVIA","PARAGUAY","URUGUAY","GUYANA","SURINAME","FRENCH GUIANA","SOUTH AMERICA","LATIN"]
+    matched = [f for f in FEEDS if f["lang"] in sa_langs]
+    await send_filtered(update, matched[:25], "🌎 South America 100% - Latest News...")
 
 async def check_news(bot):
     for feed_info in FEEDS:
@@ -535,7 +623,7 @@ async def check_news(bot):
                 text = make_text(feed_info, title, link)
                 for ch in CHANNEL_IDS:
                     try:
-                        await bot.send_message(chat_id=ch, text=text, parse_mode=ParseMode.HTML, disable_web_page_preview=False)
+                        await bot.send_message(chat_id=ch, text=text, parse_mode=ParseMode.HTML, disable_web_page_preview=False, reply_markup=get_country_button())
                     except Exception as e:
                         print(f"Send fail {ch}: {e}")
                 await asyncio.sleep(1)
@@ -559,6 +647,11 @@ def main():
     app = Application.builder().token(BOT_TOKEN).post_init(post_init).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("latest", latest))
+    app.add_handler(CommandHandler("news", news_country))
+    app.add_handler(CommandHandler("countries", countries_list))
+    app.add_handler(CommandHandler("asia", region_asia))
+    app.add_handler(CommandHandler("europe", region_europe))
+    app.add_handler(CommandHandler("southamerica", region_southamerica))
     print("Bot Started - Auto + Commands")
     app.run_polling()
 
