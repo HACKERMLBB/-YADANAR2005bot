@@ -161,6 +161,49 @@ FEEDS = [
     {"lang": "LIECHTENSTEIN", "flag": "🇱🇮", "name": "Liechtenstein News", "url": "https://news.google.com/rss/search?q=Liechtenstein&hl=en&gl=LI&ceid=LI:en"},
     {"lang": "KOSOVO", "flag": "🇽🇰", "name": "Kosovo News", "url": "https://news.google.com/rss/search?q=Kosovo&hl=en&gl=XK&ceid=XK:en"},
 
+    # --- AMERICAS - NORTH AMERICA ---
+    {"lang": "USA", "flag": "🇺🇸", "name": "USA News", "url": "https://news.google.com/rss/search?q=USA&hl=en&gl=US&ceid=US:en"},
+    {"lang": "CANADA", "flag": "🇨🇦", "name": "Canada News", "url": "https://news.google.com/rss/search?q=Canada&hl=en&gl=CA&ceid=CA:en"},
+    {"lang": "MEXICO", "flag": "🇲🇽", "name": "Mexico News", "url": "https://news.google.com/rss/search?q=Mexico&hl=en&gl=MX&ceid=MX:en"},
+
+    # --- AMERICAS - CENTRAL AMERICA ---
+    {"lang": "GUATEMALA", "flag": "🇬🇹", "name": "Guatemala News", "url": "https://news.google.com/rss/search?q=Guatemala&hl=en&gl=GT&ceid=GT:en"},
+    {"lang": "BELIZE", "flag": "🇧🇿", "name": "Belize News", "url": "https://news.google.com/rss/search?q=Belize&hl=en&gl=BZ&ceid=BZ:en"},
+    {"lang": "HONDURAS", "flag": "🇭🇳", "name": "Honduras News", "url": "https://news.google.com/rss/search?q=Honduras&hl=en&gl=HN&ceid=HN:en"},
+    {"lang": "EL SALVADOR", "flag": "🇸🇻", "name": "El Salvador News", "url": "https://news.google.com/rss/search?q=El+Salvador&hl=en&gl=SV&ceid=SV:en"},
+    {"lang": "NICARAGUA", "flag": "🇳🇮", "name": "Nicaragua News", "url": "https://news.google.com/rss/search?q=Nicaragua&hl=en&gl=NI&ceid=NI:en"},
+    {"lang": "COSTA RICA", "flag": "🇨🇷", "name": "Costa Rica News", "url": "https://news.google.com/rss/search?q=Costa+Rica&hl=en&gl=CR&ceid=CR:en"},
+    {"lang": "PANAMA", "flag": "🇵🇦", "name": "Panama News", "url": "https://news.google.com/rss/search?q=Panama&hl=en&gl=PA&ceid=PA:en"},
+
+    # --- AMERICAS - CARIBBEAN ---
+    {"lang": "CUBA", "flag": "🇨🇺", "name": "Cuba News", "url": "https://news.google.com/rss/search?q=Cuba&hl=en&gl=CU&ceid=CU:en"},
+    {"lang": "JAMAICA", "flag": "🇯🇲", "name": "Jamaica News", "url": "https://news.google.com/rss/search?q=Jamaica&hl=en&gl=JM&ceid=JM:en"},
+    {"lang": "HAITI", "flag": "🇭🇹", "name": "Haiti News", "url": "https://news.google.com/rss/search?q=Haiti&hl=en&gl=HT&ceid=HT:en"},
+    {"lang": "DOMINICAN REPUBLIC", "flag": "🇩🇴", "name": "Dominican Republic News", "url": "https://news.google.com/rss/search?q=Dominican+Republic&hl=en&gl=DO&ceid=DO:en"},
+    {"lang": "BAHAMAS", "flag": "🇧🇸", "name": "Bahamas News", "url": "https://news.google.com/rss/search?q=Bahamas&hl=en&gl=BS&ceid=BS:en"},
+    {"lang": "TRINIDAD", "flag": "🇹🇹", "name": "Trinidad News", "url": "https://news.google.com/rss/search?q=Trinidad&hl=en&gl=TT&ceid=TT:en"},
+    {"lang": "BARBADOS", "flag": "🇧🇧", "name": "Barbados News", "url": "https://news.google.com/rss/search?q=Barbados&hl=en&gl=BB&ceid=BB:en"},
+    {"lang": "GRENADA", "flag": "🇬🇩", "name": "Grenada News", "url": "https://news.google.com/rss/search?q=Grenada&hl=en&gl=GD&ceid=GD:en"},
+    {"lang": "SAINT LUCIA", "flag": "🇱🇨", "name": "Saint Lucia News", "url": "https://news.google.com/rss/search?q=Saint+Lucia&hl=en&gl=LC&ceid=LC:en"},
+    {"lang": "SAINT VINCENT", "flag": "🇻🇨", "name": "Saint Vincent News", "url": "https://news.google.com/rss/search?q=Saint+Vincent&hl=en&gl=VC&ceid=VC:en"},
+    {"lang": "ANTIGUA", "flag": "🇦🇬", "name": "Antigua News", "url": "https://news.google.com/rss/search?q=Antigua&hl=en&gl=AG&ceid=AG:en"},
+    {"lang": "DOMINICA", "flag": "🇩🇲", "name": "Dominica News", "url": "https://news.google.com/rss/search?q=Dominica&hl=en&gl=DM&ceid=DM:en"},
+    {"lang": "SAINT KITTS", "flag": "🇰🇳", "name": "Saint Kitts News", "url": "https://news.google.com/rss/search?q=Saint+Kitts&hl=en&gl=KN&ceid=KN:en"},
+
+    # --- AMERICAS - SOUTH AMERICA ---
+    {"lang": "BRAZIL", "flag": "🇧🇷", "name": "Brazil News", "url": "https://news.google.com/rss/search?q=Brazil&hl=en&gl=BR&ceid=BR:en"},
+    {"lang": "ARGENTINA", "flag": "🇦🇷", "name": "Argentina News", "url": "https://news.google.com/rss/search?q=Argentina&hl=en&gl=AR&ceid=AR:en"},
+    {"lang": "COLOMBIA", "flag": "🇨🇴", "name": "Colombia News", "url": "https://news.google.com/rss/search?q=Colombia&hl=en&gl=CO&ceid=CO:en"},
+    {"lang": "PERU", "flag": "🇵🇪", "name": "Peru News", "url": "https://news.google.com/rss/search?q=Peru&hl=en&gl=PE&ceid=PE:en"},
+    {"lang": "VENEZUELA", "flag": "🇻🇪", "name": "Venezuela News", "url": "https://news.google.com/rss/search?q=Venezuela&hl=en&gl=VE&ceid=VE:en"},
+    {"lang": "CHILE", "flag": "🇨🇱", "name": "Chile News", "url": "https://news.google.com/rss/search?q=Chile&hl=en&gl=CL&ceid=CL:en"},
+    {"lang": "ECUADOR", "flag": "🇪🇨", "name": "Ecuador News", "url": "https://news.google.com/rss/search?q=Ecuador&hl=en&gl=EC&ceid=EC:en"},
+    {"lang": "BOLIVIA", "flag": "🇧🇴", "name": "Bolivia News", "url": "https://news.google.com/rss/search?q=Bolivia&hl=en&gl=BO&ceid=BO:en"},
+    {"lang": "PARAGUAY", "flag": "🇵🇾", "name": "Paraguay News", "url": "https://news.google.com/rss/search?q=Paraguay&hl=en&gl=PY&ceid=PY:en"},
+    {"lang": "URUGUAY", "flag": "🇺🇾", "name": "Uruguay News", "url": "https://news.google.com/rss/search?q=Uruguay&hl=en&gl=UY&ceid=UY:en"},
+    {"lang": "GUYANA", "flag": "🇬🇾", "name": "Guyana News", "url": "https://news.google.com/rss/search?q=Guyana&hl=en&gl=GY&ceid=GY:en"},
+    {"lang": "SURINAME", "flag": "🇸🇷", "name": "Suriname News", "url": "https://news.google.com/rss/search?q=Suriname&hl=en&gl=SR&ceid=SR:en"},
+
     # --- TERRITORIES / SPECIAL REGIONS ---
     {"lang": "TIBET", "flag": "🏔️", "name": "Tibet News", "url": "https://news.google.com/rss/search?q=Tibet&hl=en&gl=CN&ceid=CN:en"},
     {"lang": "HONG KONG", "flag": "🇭🇰", "name": "Hong Kong News", "url": "https://news.google.com/rss/search?q=Hong+Kong&hl=en&gl=HK&ceid=HK:en"},
@@ -180,10 +223,24 @@ FEEDS = [
     {"lang": "TRANSNISTRIA", "flag": "🏴", "name": "Transnistria News", "url": "https://news.google.com/rss/search?q=Transnistria&hl=en&gl=MD&ceid=MD:en"},
     {"lang": "SICILY", "flag": "🇮🇹", "name": "Sicily News", "url": "https://news.google.com/rss/search?q=Sicily&hl=en&gl=IT&ceid=IT:en"},
     {"lang": "SARDINIA", "flag": "🇮🇹", "name": "Sardinia News", "url": "https://news.google.com/rss/search?q=Sardinia&hl=en&gl=IT&ceid=IT:en"},
-
-    # --- OTHER ---
-    {"lang": "USA", "flag": "🇺🇸", "name": "USA News", "url": "https://news.google.com/rss/search?q=USA&hl=en&gl=US&ceid=US:en"},
-    {"lang": "BRAZIL", "flag": "🇧🇷", "name": "Brazil News", "url": "https://news.google.com/rss/search?q=Brazil&hl=en&gl=BR&ceid=BR:en"},
+    {"lang": "PUERTO RICO", "flag": "🇵🇷", "name": "Puerto Rico News", "url": "https://news.google.com/rss/search?q=Puerto+Rico&hl=en&gl=PR&ceid=PR:en"},
+    {"lang": "US VIRGIN ISLANDS", "flag": "🇻🇮", "name": "US Virgin Islands News", "url": "https://news.google.com/rss/search?q=US+Virgin+Islands&hl=en&gl=VI&ceid=VI:en"},
+    {"lang": "BERMUDA", "flag": "🇧🇲", "name": "Bermuda News", "url": "https://news.google.com/rss/search?q=Bermuda&hl=en&gl=BM&ceid=BM:en"},
+    {"lang": "CAYMAN", "flag": "🇰🇾", "name": "Cayman Islands News", "url": "https://news.google.com/rss/search?q=Cayman+Islands&hl=en&gl=KY&ceid=KY:en"},
+    {"lang": "BRITISH VIRGIN", "flag": "🇻🇬", "name": "British Virgin Islands News", "url": "https://news.google.com/rss/search?q=British+Virgin+Islands&hl=en&gl=VG&ceid=VG:en"},
+    {"lang": "ANGUILLA", "flag": "🇦🇮", "name": "Anguilla News", "url": "https://news.google.com/rss/search?q=Anguilla&hl=en&gl=AI&ceid=AI:en"},
+    {"lang": "MONTSERRAT", "flag": "🇲🇸", "name": "Montserrat News", "url": "https://news.google.com/rss/search?q=Montserrat&hl=en&gl=MS&ceid=MS:en"},
+    {"lang": "TURKS", "flag": "🇹🇨", "name": "Turks and Caicos News", "url": "https://news.google.com/rss/search?q=Turks+and+Caicos&hl=en&gl=TC&ceid=TC:en"},
+    {"lang": "FALKLAND", "flag": "🇫🇰", "name": "Falkland Islands News", "url": "https://news.google.com/rss/search?q=Falkland+Islands&hl=en&gl=FK&ceid=FK:en"},
+    {"lang": "ARUBA", "flag": "🇦🇼", "name": "Aruba News", "url": "https://news.google.com/rss/search?q=Aruba&hl=en&gl=AW&ceid=AW:en"},
+    {"lang": "CURACAO", "flag": "🇨🇼", "name": "Curacao News", "url": "https://news.google.com/rss/search?q=Curacao&hl=en&gl=CW&ceid=CW:en"},
+    {"lang": "SINT MAARTEN", "flag": "🇸🇽", "name": "Sint Maarten News", "url": "https://news.google.com/rss/search?q=Sint+Maarten&hl=en&gl=SX&ceid=SX:en"},
+    {"lang": "BONAIRE", "flag": "🇧🇶", "name": "Bonaire News", "url": "https://news.google.com/rss/search?q=Bonaire&hl=en&gl=BQ&ceid=BQ:en"},
+    {"lang": "FRENCH GUIANA", "flag": "🇬🇫", "name": "French Guiana News", "url": "https://news.google.com/rss/search?q=French+Guiana&hl=en&gl=GF&ceid=GF:en"},
+    {"lang": "SAINT MARTIN", "flag": "🇲🇫", "name": "Saint Martin News", "url": "https://news.google.com/rss/search?q=Saint+Martin&hl=en&gl=MF&ceid=MF:en"},
+    {"lang": "SAINT BARTHELEMY", "flag": "🇧🇱", "name": "Saint Barthelemy News", "url": "https://news.google.com/rss/search?q=Saint+Barthelemy&hl=en&gl=BL&ceid=BL:en"},
+    {"lang": "GUADELOUPE", "flag": "🇬🇵", "name": "Guadeloupe News", "url": "https://news.google.com/rss/search?q=Guadeloupe&hl=en&gl=GP&ceid=GP:en"},
+    {"lang": "MARTINIQUE", "flag": "🇲🇶", "name": "Martinique News", "url": "https://news.google.com/rss/search?q=Martinique&hl=en&gl=MQ&ceid=MQ:en"},
 ]
 
 seen = set()
